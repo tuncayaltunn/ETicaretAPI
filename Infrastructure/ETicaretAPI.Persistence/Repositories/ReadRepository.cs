@@ -5,7 +5,7 @@ using ETicaretAPI.Domain.Entities.Common;
 using ETicaretAPI.Persistence.Contexts;
 using Microsoft.EntityFrameworkCore;
 
-namespace ETicaretAPI.Persistence.Concretes
+namespace ETicaretAPI.Persistence.Repositories
 {
     public class ReadRepository<T> : IReadRepository<T> where T : BaseEntity
     {

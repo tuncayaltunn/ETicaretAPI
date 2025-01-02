@@ -10,14 +10,18 @@
     <ProjectReference Include="..\..\Core\ETicaretAPI.Application\ETicaretAPI.Application.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <None Remove="Concretes\" />
-    <None Remove="Repositories\" />
     <None Remove="Contexts\" />
+    <None Remove="Concretes\CustomerRepositories\" />
+    <None Remove="Concretes\OrderRepositories\" />
+    <None Remove="Concretes\ProductRepositories\" />
+    <None Remove="Repositories\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Concretes\" />
-    <Folder Include="Repositories\" />
     <Folder Include="Contexts\" />
+    <Folder Include="Concretes\CustomerRepositories\" />
+    <Folder Include="Concretes\OrderRepositories\" />
+    <Folder Include="Concretes\ProductRepositories\" />
+    <Folder Include="Repositories\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />

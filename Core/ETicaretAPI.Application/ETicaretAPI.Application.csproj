@@ -12,16 +12,16 @@
   <ItemGroup>
     <None Remove="Abstractions\" />
     <None Remove="Repositories\" />
-    <None Remove="Repositories\CustomerRepositories\" />
-    <None Remove="Repositories\ProductRepositories\" />
-    <None Remove="Repositories\OrderRepositories\" />
+    <None Remove="Repositories\ICustomerRepositories\" />
+    <None Remove="Repositories\IOrderRepositories\" />
+    <None Remove="Repositories\IProductRepositories\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abstractions\" />
     <Folder Include="Repositories\" />
-    <Folder Include="Repositories\CustomerRepositories\" />
-    <Folder Include="Repositories\ProductRepositories\" />
-    <Folder Include="Repositories\OrderRepositories\" />
+    <Folder Include="Repositories\ICustomerRepositories\" />
+    <Folder Include="Repositories\IOrderRepositories\" />
+    <Folder Include="Repositories\IProductRepositories\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0" />
