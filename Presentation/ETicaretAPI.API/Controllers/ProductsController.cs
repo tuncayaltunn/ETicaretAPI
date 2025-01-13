@@ -25,6 +25,20 @@ namespace ETicaretAPI.API.Controllers
 
 			return Ok(product);
 		}
-	}
+
+        [HttpGet("getall")]
+        public IActionResult GetAll()
+        {
+            var product = _productReadRepository.GetAll();
+
+            return Ok(product);
+        }
+
+        [HttpGet("corstest")]
+        public IActionResult CorsTest()
+        {
+            return Ok("Hello CORS");
+        }
+    }
 }
 
