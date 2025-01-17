@@ -47,3 +47,8 @@
 /Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Presentation/ETicaretAPI.API/obj/Debug/net7.0/ETicaretAPI.API.pdb
 /Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Presentation/ETicaretAPI.API/obj/Debug/net7.0/ETicaretAPI.API.genruntimeconfig.cache
 /Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Presentation/ETicaretAPI.API/obj/Debug/net7.0/ref/ETicaretAPI.API.dll
+/Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Presentation/ETicaretAPI.API/bin/Debug/net7.0/FluentValidation.dll
+/Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Presentation/ETicaretAPI.API/bin/Debug/net7.0/FluentValidation.AspNetCore.dll
+/Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Presentation/ETicaretAPI.API/bin/Debug/net7.0/FluentValidation.DependencyInjectionExtensions.dll
+/Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Presentation/ETicaretAPI.API/bin/Debug/net7.0/ETicaretAPI.Infrastructure.dll
+/Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Presentation/ETicaretAPI.API/bin/Debug/net7.0/ETicaretAPI.Infrastructure.pdb

@@ -42,6 +42,18 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.11.0, )"
+            },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.3.0, )"
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[11.11.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.0, )"
@@ -89,6 +101,63 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.306/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Infrastructure/ETicaretAPI.Infrastructure/ETicaretAPI.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Infrastructure/ETicaretAPI.Infrastructure/ETicaretAPI.Infrastructure.csproj",
+        "projectName": "ETicaretAPI.Infrastructure",
+        "projectPath": "/Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Infrastructure/ETicaretAPI.Infrastructure/ETicaretAPI.Infrastructure.csproj",
+        "packagesPath": "/Users/taft/.nuget/packages/",
+        "outputPath": "/Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Infrastructure/ETicaretAPI.Infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/taft/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Core/ETicaretAPI.Application/ETicaretAPI.Application.csproj": {
+                "projectPath": "/Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Core/ETicaretAPI.Application/ETicaretAPI.Application.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -230,6 +299,9 @@
             "projectReferences": {
               "/Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Core/ETicaretAPI.Application/ETicaretAPI.Application.csproj": {
                 "projectPath": "/Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Core/ETicaretAPI.Application/ETicaretAPI.Application.csproj"
+              },
+              "/Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Infrastructure/ETicaretAPI.Infrastructure/ETicaretAPI.Infrastructure.csproj": {
+                "projectPath": "/Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Infrastructure/ETicaretAPI.Infrastructure/ETicaretAPI.Infrastructure.csproj"
               },
               "/Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Infrastructure/ETicaretAPI.Persistence/ETicaretAPI.Persistence.csproj": {
                 "projectPath": "/Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Infrastructure/ETicaretAPI.Persistence/ETicaretAPI.Persistence.csproj"
