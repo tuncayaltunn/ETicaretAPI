@@ -20,6 +20,7 @@
     <None Remove="Validators\" />
     <None Remove="Validators\Products\" />
     <None Remove="RequestParameters\" />
+    <None Remove="Services\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abstractions\" />
@@ -32,6 +33,7 @@
     <Folder Include="Validators\" />
     <Folder Include="Validators\Products\" />
     <Folder Include="RequestParameters\" />
+    <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0" />

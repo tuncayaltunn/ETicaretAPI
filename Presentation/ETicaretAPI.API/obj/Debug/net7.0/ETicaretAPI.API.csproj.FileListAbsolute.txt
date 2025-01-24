@@ -52,3 +52,4 @@
 /Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Presentation/ETicaretAPI.API/obj/Debug/net7.0/ETicaretAPI.API.pdb
 /Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Presentation/ETicaretAPI.API/obj/Debug/net7.0/ETicaretAPI.API.genruntimeconfig.cache
 /Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Presentation/ETicaretAPI.API/obj/Debug/net7.0/ref/ETicaretAPI.API.dll
+/Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Presentation/ETicaretAPI.API/bin/Debug/net7.0/ETicaretAPI.API.staticwebassets.runtime.json

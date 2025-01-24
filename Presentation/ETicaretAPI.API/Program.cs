@@ -1,4 +1,5 @@
 ﻿using ETicaretAPI.Application.Validators.Products;
+using ETicaretAPI.Infrastructure;
 using ETicaretAPI.Infrastructure.Filters;
 using ETicaretAPI.Persistence;
 using FluentValidation.AspNetCore;
@@ -8,6 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddPersistenceServices();
+builder.Services.AddInfrastructureServices();
 
 builder.Services.AddCors(options => options.AddDefaultPolicy(policy =>
 {
