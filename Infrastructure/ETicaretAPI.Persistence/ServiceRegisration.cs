@@ -1,5 +1,4 @@
 ﻿using System;
-using ETicaretAPI.Application.Abstractions;
 using ETicaretAPI.Application.Repositories.ICustomerRepositories;
 using ETicaretAPI.Application.Repositories.IOrderRepositories;
 using ETicaretAPI.Application.Repositories.IProductRepositories;

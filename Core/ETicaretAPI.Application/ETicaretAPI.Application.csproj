@@ -24,6 +24,9 @@
     <None Remove="Repositories\IFileRepositories\" />
     <None Remove="Repositories\IInvoiceFileRepositories\" />
     <None Remove="Repositories\IProductImageFileRepositories\" />
+    <None Remove="Abstractions\Storage\" />
+    <None Remove="Abstractions\Storage\Local\" />
+    <None Remove="Abstractions\Storage\Azure\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abstractions\" />
@@ -40,6 +43,9 @@
     <Folder Include="Repositories\IFileRepositories\" />
     <Folder Include="Repositories\IInvoiceFileRepositories\" />
     <Folder Include="Repositories\IProductImageFileRepositories\" />
+    <Folder Include="Abstractions\Storage\" />
+    <Folder Include="Abstractions\Storage\Local\" />
+    <Folder Include="Abstractions\Storage\Azure\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0" />
