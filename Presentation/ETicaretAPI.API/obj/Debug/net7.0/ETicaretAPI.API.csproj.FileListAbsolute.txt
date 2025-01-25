@@ -1,5 +1,6 @@
 /Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Presentation/ETicaretAPI.API/bin/Debug/net7.0/appsettings.Development.json
 /Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Presentation/ETicaretAPI.API/bin/Debug/net7.0/appsettings.json
+/Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Presentation/ETicaretAPI.API/bin/Debug/net7.0/ETicaretAPI.API.staticwebassets.runtime.json
 /Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Presentation/ETicaretAPI.API/bin/Debug/net7.0/ETicaretAPI.API
 /Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Presentation/ETicaretAPI.API/bin/Debug/net7.0/ETicaretAPI.API.deps.json
 /Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Presentation/ETicaretAPI.API/bin/Debug/net7.0/ETicaretAPI.API.runtimeconfig.json
@@ -52,4 +53,3 @@
 /Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Presentation/ETicaretAPI.API/obj/Debug/net7.0/ETicaretAPI.API.pdb
 /Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Presentation/ETicaretAPI.API/obj/Debug/net7.0/ETicaretAPI.API.genruntimeconfig.cache
 /Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Presentation/ETicaretAPI.API/obj/Debug/net7.0/ref/ETicaretAPI.API.dll
-/Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Presentation/ETicaretAPI.API/bin/Debug/net7.0/ETicaretAPI.API.staticwebassets.runtime.json
