@@ -13,6 +13,8 @@ namespace ETicaretAPI.Infrastructure.Services.Storage
             _storage = storage;
         }
 
+        public string StorageName => _storage.GetType().Name;
+
         public async Task DeleteAsync(string pathOrContainer, string fileName)
             => await _storage.DeleteAsync(pathOrContainer, fileName);
 
