@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Net;
+using ETicaretAPI.Application.Abstractions.Storage;
+using ETicaretAPI.Application.Repositories.IProductImageFileRepositories;
 using ETicaretAPI.Application.Repositories.IProductRepositories;
 using ETicaretAPI.Application.RequestParameters;
 using ETicaretAPI.Application.ViewModels.Products;
@@ -15,15 +17,20 @@ namespace ETicaretAPI.API.Controllers
 		private readonly IProductReadRepository _productReadRepository;
 		private readonly IProductWriteRepository _productWriteRepository;
 		private readonly IWebHostEnvironment _webHostEnvironment;
+		private readonly IStorageService _storageService;
+		private readonly IProductImageFileWriteRepository _productImageFileWriteRepository;
 
         public ProductsController(IProductWriteRepository productWriteRepository,
             IProductReadRepository productReadRepository,
-            IWebHostEnvironment webHostEnvironment
-            )
+            IWebHostEnvironment webHostEnvironment,
+            IStorageService storageService,
+            IProductImageFileWriteRepository productImageFileWriteRepository)
         {
             _productWriteRepository = productWriteRepository;
             _productReadRepository = productReadRepository;
             _webHostEnvironment = webHostEnvironment;
+            _storageService = storageService;
+            _productImageFileWriteRepository = productImageFileWriteRepository;
         }
 
         [HttpGet]
@@ -91,30 +98,20 @@ namespace ETicaretAPI.API.Controllers
 		}
 
 		[HttpPost("[action]")]
-		public async Task<IActionResult> Upload()
+		public async Task<IActionResult> Upload(string id)
 		{
-			//await _fileService.UploadAsync("resource/product-images", Request.Form.Files);
+			List<(string fileName, string pathOrContainerName)> result
+				= await _storageService.UploadAsync("photo-images", Request.Form.Files);
 
+			await _productImageFileWriteRepository.AddRangeAsync(result.Select(q => new ProductImageFile
+			{
+				FileName = q.fileName,
+				Path = q.pathOrContainerName,
+				Storage = _storageService.StorageName
+			}).ToList());
 
-			//string uploadPath = Path.Combine(_webHostEnvironment.WebRootPath,
-			//	"resource/product-images");
+			await _productImageFileWriteRepository.SaveAsync();
 
-			//if (!Directory.Exists(uploadPath))
-			//	Directory.CreateDirectory(uploadPath);
-
-			//Random r = new();
-
-			//foreach (IFormFile file in Request.Form.Files)
-			//{
-			//	string fullPath = Path.Combine(uploadPath,
-			//		$"{r.Next()}{Path.GetExtension(file.FileName)}");
-
-			//	using FileStream fileStream = new(fullPath, FileMode.Create,
-			//		FileAccess.Write, FileShare.None, 1024 * 1024, useAsync: false);
-			//	await file.CopyToAsync(fileStream);
-
-			//	await fileStream.FlushAsync();
-			//}
 			return Ok();
 		}
 
