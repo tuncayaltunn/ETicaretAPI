@@ -42,7 +42,7 @@ namespace ETicaretAPI.Persistence
             services.AddScoped<IInvoiceFileWriteRepository, InvoiceFileWriteRepository>();
 
             services.AddScoped<IProductImageFileReadRepository, ProductImageFileReadRepository>();
-            services.AddScoped<IProductImageFileWriteRepository, IProductImageFileWriteRepository>();
+            services.AddScoped<IProductImageFileWriteRepository, ProductImageFileWriteRepository>();
 
         } 
 	}

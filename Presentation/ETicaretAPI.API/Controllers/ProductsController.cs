@@ -103,11 +103,15 @@ namespace ETicaretAPI.API.Controllers
 			List<(string fileName, string pathOrContainerName)> result
 				= await _storageService.UploadAsync("photo-images", Request.Form.Files);
 
+			Product product = await _productReadRepository.GetByIdAsync(id);
+
+
 			await _productImageFileWriteRepository.AddRangeAsync(result.Select(q => new ProductImageFile
 			{
 				FileName = q.fileName,
 				Path = q.pathOrContainerName,
-				Storage = _storageService.StorageName
+				Storage = _storageService.StorageName,
+				Products = new List<Product>() { product }
 			}).ToList());
 
 			await _productImageFileWriteRepository.SaveAsync();
