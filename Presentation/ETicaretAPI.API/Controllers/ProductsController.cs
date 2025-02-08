@@ -7,6 +7,7 @@ using ETicaretAPI.Application.RequestParameters;
 using ETicaretAPI.Application.ViewModels.Products;
 using ETicaretAPI.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace ETicaretAPI.API.Controllers
 {
@@ -118,6 +119,36 @@ namespace ETicaretAPI.API.Controllers
 
 			return Ok();
 		}
+
+		[HttpGet("[action]/{id}")]
+		public async Task<IActionResult> GetProductImages(string id)
+		{
+			Product? product = await _productReadRepository.Table
+				.Include(q => q.ProductImageFiles)
+				.FirstOrDefaultAsync(q => q.Id == Guid.Parse(id));
+
+			return Ok(product.ProductImageFiles.Select(q => new
+			{
+				q.Path, // Ben local storage kullandım. Path'i ona göre düzenleyebiliriz
+				q.FileName,
+				q.Id
+			}));
+		}
+
+		[HttpGet("[action]/{id}")]
+		public async Task<IActionResult> DeleteProductImage(string id, string imageId)
+		{
+            Product? product = await _productReadRepository.Table
+							.Include(q => q.ProductImageFiles)
+							.FirstOrDefaultAsync(q => q.Id == Guid.Parse(id));
+			ProductImageFile? productImageFile = product.ProductImageFiles
+										.FirstOrDefault(q => q.Id == Guid.Parse(imageId));
+
+			product.ProductImageFiles.Remove(productImageFile);
+			_productWriteRepository.SaveAsync();
+			return Ok();
+        }
+
 
 		//      [HttpGet("{id}")]
 		//public async Task<IActionResult> Get(string id)
