@@ -30,8 +30,18 @@
     <None Remove="Features\" />
     <None Remove="Features\Commands\" />
     <None Remove="Features\Queries\" />
-    <None Remove="Features\Queries\GetAllProducts\" />
-    <None Remove="Features\Commands\CreateProduct\" />
+    <None Remove="Features\Commands\Product\" />
+    <None Remove="Features\Commands\Product\CreateProduct\" />
+    <None Remove="Features\Queries\Product\" />
+    <None Remove="Features\Queries\Product\GetAllProducts\" />
+    <None Remove="Features\Commands\ProductImageFile\" />
+    <None Remove="Features\Queries\ProductImageFile\" />
+    <None Remove="Features\Commands\Product\RemoveProduct\" />
+    <None Remove="Features\Commands\Product\UpdateProduct\" />
+    <None Remove="Features\Queries\Product\GetByIdProduct\" />
+    <None Remove="Features\Commands\ProductImageFile\UploadProductImage\" />
+    <None Remove="Features\Queries\ProductImageFile\GetProductmages\" />
+    <None Remove="Features\Commands\ProductImageFile\RemoveProductImage\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abstractions\" />
@@ -54,8 +64,18 @@
     <Folder Include="Features\" />
     <Folder Include="Features\Commands\" />
     <Folder Include="Features\Queries\" />
-    <Folder Include="Features\Queries\GetAllProducts\" />
-    <Folder Include="Features\Commands\CreateProduct\" />
+    <Folder Include="Features\Commands\Product\" />
+    <Folder Include="Features\Commands\Product\CreateProduct\" />
+    <Folder Include="Features\Queries\Product\" />
+    <Folder Include="Features\Queries\Product\GetAllProducts\" />
+    <Folder Include="Features\Commands\ProductImageFile\" />
+    <Folder Include="Features\Queries\ProductImageFile\" />
+    <Folder Include="Features\Commands\Product\RemoveProduct\" />
+    <Folder Include="Features\Commands\Product\UpdateProduct\" />
+    <Folder Include="Features\Queries\Product\GetByIdProduct\" />
+    <Folder Include="Features\Commands\ProductImageFile\UploadProductImage\" />
+    <Folder Include="Features\Queries\ProductImageFile\GetProductmages\" />
+    <Folder Include="Features\Commands\ProductImageFile\RemoveProductImage\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0" />
