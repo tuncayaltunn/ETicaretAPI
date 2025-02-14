@@ -45,6 +45,8 @@
     <None Remove="Features\Commands\AppUser\" />
     <None Remove="Features\Commands\AppUser\CreateUser\" />
     <None Remove="Exceptions\" />
+    <None Remove="Features\Queries\AppUser\" />
+    <None Remove="Features\Queries\AppUser\LoginUser\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abstractions\" />
@@ -82,6 +84,8 @@
     <Folder Include="Features\Commands\AppUser\" />
     <Folder Include="Features\Commands\AppUser\CreateUser\" />
     <Folder Include="Exceptions\" />
+    <Folder Include="Features\Queries\AppUser\" />
+    <Folder Include="Features\Queries\AppUser\LoginUser\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0" />
