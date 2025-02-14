@@ -47,6 +47,8 @@
     <None Remove="Exceptions\" />
     <None Remove="Features\Queries\AppUser\" />
     <None Remove="Features\Queries\AppUser\LoginUser\" />
+    <None Remove="Abstractions\Token\" />
+    <None Remove="DTOs\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abstractions\" />
@@ -86,6 +88,8 @@
     <Folder Include="Exceptions\" />
     <Folder Include="Features\Queries\AppUser\" />
     <Folder Include="Features\Queries\AppUser\LoginUser\" />
+    <Folder Include="Abstractions\Token\" />
+    <Folder Include="DTOs\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0" />
