@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using ETicaretAPI.Application.Features.Commands.AppUser.CreateUser;
 using ETicaretAPI.Application.Features.Queries.AppUser.LoginUser;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -13,23 +12,22 @@ namespace ETicaretAPI.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class UsersController : ControllerBase
+    public class AuthController : ControllerBase
     {
         private readonly IMediator _mediator;
-
-        public UsersController(IMediator mediator)
+        
+        public AuthController(IMediator mediator)
         {
             _mediator = mediator;
         }
 
-        [HttpPost]
-        public async Task<IActionResult> Create(CreateUserCommandRequest createUserCommandRequest)
+        [HttpPost("[action]")]
+        public async Task<IActionResult> Login(LoginUserQueryRequest loginUserQueryRequest)
         {
-            CreateUserCommandResponse response = await _mediator.Send(createUserCommandRequest);
+            LoginUserQueryResponse response = await _mediator.Send(loginUserQueryRequest);
 
             return Ok(response);
         }
-
     }
 }
 

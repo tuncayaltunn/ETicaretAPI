@@ -1,4 +1,5 @@
 ﻿using System;
+using ETicaretAPI.Application.Abstractions.Services;
 using ETicaretAPI.Application.Abstractions.Token;
 using ETicaretAPI.Application.DTOs;
 using ETicaretAPI.Application.Exceptions;
@@ -9,39 +10,21 @@ namespace ETicaretAPI.Application.Features.Queries.AppUser.LoginUser
 {
 	public class LoginUserQueryHandler : IRequestHandler<LoginUserQueryRequest, LoginUserQueryResponse>
 	{
-        private readonly UserManager<ETicaretAPI.Domain.Entities.Identity.AppUser> _userManager;
-        private readonly SignInManager<ETicaretAPI.Domain.Entities.Identity.AppUser> _singInManager;
-        private readonly ITokenHandler _tokenHandler;
+        private readonly IAuthService _authService;
 
-        public LoginUserQueryHandler(UserManager<Domain.Entities.Identity.AppUser> userManager,
-            SignInManager<Domain.Entities.Identity.AppUser> singInManager,
-            ITokenHandler tokenHandler)
+        public LoginUserQueryHandler(IAuthService authService)
         {
-            _userManager = userManager;
-            _singInManager = singInManager;
-            _tokenHandler = tokenHandler;
+            _authService = authService;
         }
 
         public async Task<LoginUserQueryResponse> Handle(LoginUserQueryRequest request, CancellationToken cancellationToken)
         {
-            Domain.Entities.Identity.AppUser user = await _userManager.FindByNameAsync(request.UsernameOrEmail);
+            DTOs.Token token = await _authService.LoginAsync(request.UsernameOrEmail, request.Password, 15);
 
-            if (user == null)
-                user = await _userManager.FindByEmailAsync(request.UsernameOrEmail);
-
-            if (user == null)
-                throw new NotFoundUserException();
-
-            SignInResult result = await _singInManager.CheckPasswordSignInAsync(user, request.Password, false);
-
-            if (result.Succeeded)
+            return new LoginUserSuccessCommandResponse()
             {
-                Token token = _tokenHandler.CreateAccessToken(5);
-                return new LoginUserSuccessCommandResponse { Token = token };
-            }
-             
-            //return new LoginUserErrorCommandResponse { Message = "Kullanıcı adı veya şifre hatalı." };
-            throw new AuthenticationErrorException();
+                Token = token
+            };
         }
     }
 }
