@@ -29,6 +29,17 @@
 /Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Presentation/ETicaretAPI.API/bin/Debug/net7.0/Mono.TextTemplating.dll
 /Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Presentation/ETicaretAPI.API/bin/Debug/net7.0/Npgsql.dll
 /Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Presentation/ETicaretAPI.API/bin/Debug/net7.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
+/Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Presentation/ETicaretAPI.API/bin/Debug/net7.0/Serilog.dll
+/Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Presentation/ETicaretAPI.API/bin/Debug/net7.0/Serilog.AspNetCore.dll
+/Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Presentation/ETicaretAPI.API/bin/Debug/net7.0/Serilog.Extensions.Hosting.dll
+/Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Presentation/ETicaretAPI.API/bin/Debug/net7.0/Serilog.Extensions.Logging.dll
+/Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Presentation/ETicaretAPI.API/bin/Debug/net7.0/Serilog.Formatting.Compact.dll
+/Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Presentation/ETicaretAPI.API/bin/Debug/net7.0/Serilog.Settings.Configuration.dll
+/Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Presentation/ETicaretAPI.API/bin/Debug/net7.0/Serilog.Sinks.Console.dll
+/Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Presentation/ETicaretAPI.API/bin/Debug/net7.0/Serilog.Sinks.Debug.dll
+/Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Presentation/ETicaretAPI.API/bin/Debug/net7.0/Serilog.Sinks.File.dll
+/Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Presentation/ETicaretAPI.API/bin/Debug/net7.0/Serilog.Sinks.PeriodicBatching.dll
+/Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Presentation/ETicaretAPI.API/bin/Debug/net7.0/Serilog.Sinks.PostgreSQL.dll
 /Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Presentation/ETicaretAPI.API/bin/Debug/net7.0/Swashbuckle.AspNetCore.Swagger.dll
 /Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Presentation/ETicaretAPI.API/bin/Debug/net7.0/Swashbuckle.AspNetCore.SwaggerGen.dll
 /Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Presentation/ETicaretAPI.API/bin/Debug/net7.0/Swashbuckle.AspNetCore.SwaggerUI.dll

@@ -2,6 +2,7 @@
 using ETicaretAPI.Application.Repositories.IProductRepositories;
 using ETicaretAPI.Application.RequestParameters;
 using MediatR;
+using Microsoft.Extensions.Logging;
 
 namespace ETicaretAPI.Application.Features.Queries.Product.GetAllProducts
 {
@@ -9,10 +10,13 @@ namespace ETicaretAPI.Application.Features.Queries.Product.GetAllProducts
                                                             GetAllProductsQueryResponse>
 	{
         private readonly IProductReadRepository _productReadRepository;
+        private readonly ILogger<GetAllProductsQueryHandler> _logger;
 
-        public GetAllProductsQueryHandler(IProductReadRepository productReadRepository)
+        public GetAllProductsQueryHandler(IProductReadRepository productReadRepository,
+                                          ILogger<GetAllProductsQueryHandler> logger)
         {
             _productReadRepository = productReadRepository;
+            _logger = logger;
         }
 
         public async Task<GetAllProductsQueryResponse> Handle(GetAllProductsQueryRequest request,
@@ -30,7 +34,7 @@ namespace ETicaretAPI.Application.Features.Queries.Product.GetAllProducts
                     p.CreatedDate,
                     p.UpdatedDate
                 }).ToList();
-
+            _logger.LogInformation("Get All Products");
             return new()
             {
                 Products = products,
