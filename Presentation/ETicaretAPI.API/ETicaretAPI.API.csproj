@@ -25,12 +25,16 @@
     <None Remove="Controllers\" />
     <None Remove="Configurations\" />
     <None Remove="Configurations\ColumnWriters\" />
+    <None Remove="Middlewares\" />
+    <None Remove="Extensions\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
     <Folder Include="wwwroot\" />
     <Folder Include="Configurations\" />
     <Folder Include="Configurations\ColumnWriters\" />
+    <Folder Include="Middlewares\" />
+    <Folder Include="Extensions\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Core\ETicaretAPI.Application\ETicaretAPI.Application.csproj">
