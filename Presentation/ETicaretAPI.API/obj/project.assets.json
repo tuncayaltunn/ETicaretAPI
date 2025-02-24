@@ -1871,6 +1871,22 @@
         "runtime": {
           "bin/placeholder/ETicaretAPI.Persistence.dll": {}
         }
+      },
+      "ETicaretAPI.SignalR/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "ETicaretAPI.Application": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ETicaretAPI.SignalR.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ETicaretAPI.SignalR.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -5270,6 +5286,11 @@
       "type": "project",
       "path": "../../Infrastructure/ETicaretAPI.Persistence/ETicaretAPI.Persistence.csproj",
       "msbuildProject": "../../Infrastructure/ETicaretAPI.Persistence/ETicaretAPI.Persistence.csproj"
+    },
+    "ETicaretAPI.SignalR/1.0.0": {
+      "type": "project",
+      "path": "../../Infrastructure/ETicaretAPI.SignalR/ETicaretAPI.SignalR.csproj",
+      "msbuildProject": "../../Infrastructure/ETicaretAPI.SignalR/ETicaretAPI.SignalR.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5277,6 +5298,7 @@
       "ETicaretAPI.Application >= 1.0.0",
       "ETicaretAPI.Infrastructure >= 1.0.0",
       "ETicaretAPI.Persistence >= 1.0.0",
+      "ETicaretAPI.SignalR >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.0",
       "Microsoft.AspNetCore.OpenApi >= 7.0.9",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.0",
@@ -5320,6 +5342,9 @@
             },
             "/Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Infrastructure/ETicaretAPI.Persistence/ETicaretAPI.Persistence.csproj": {
               "projectPath": "/Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Infrastructure/ETicaretAPI.Persistence/ETicaretAPI.Persistence.csproj"
+            },
+            "/Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Infrastructure/ETicaretAPI.SignalR/ETicaretAPI.SignalR.csproj": {
+              "projectPath": "/Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Infrastructure/ETicaretAPI.SignalR/ETicaretAPI.SignalR.csproj"
             }
           }
         }

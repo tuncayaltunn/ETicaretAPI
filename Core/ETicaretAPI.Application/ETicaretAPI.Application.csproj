@@ -53,6 +53,7 @@
     <None Remove="DTOs\User\" />
     <None Remove="Abstractions\Services\Authentication\" />
     <None Remove="Features\Commands\RefreshTokenLogin\" />
+    <None Remove="Abstractions\Hubs\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abstractions\" />
@@ -98,6 +99,7 @@
     <Folder Include="DTOs\User\" />
     <Folder Include="Abstractions\Services\Authentication\" />
     <Folder Include="Features\Commands\RefreshTokenLogin\" />
+    <Folder Include="Abstractions\Hubs\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0" />
