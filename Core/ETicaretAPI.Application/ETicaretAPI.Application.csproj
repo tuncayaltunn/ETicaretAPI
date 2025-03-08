@@ -54,6 +54,15 @@
     <None Remove="Abstractions\Services\Authentication\" />
     <None Remove="Features\Commands\RefreshTokenLogin\" />
     <None Remove="Abstractions\Hubs\" />
+    <None Remove="Repositories\IBasketItemRepositories\" />
+    <None Remove="Repositories\IBasketRepositories\" />
+    <None Remove="ViewModels\Baskets\" />
+    <None Remove="Features\Commands\Basket\" />
+    <None Remove="Features\Queries\Basket\" />
+    <None Remove="Features\Commands\Basket\AddItemToBasket\" />
+    <None Remove="Features\Commands\Basket\UpdateQuantity\" />
+    <None Remove="Features\Commands\Basket\RemoveBasketItem\" />
+    <None Remove="Features\Queries\Basket\GetBasketItems\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abstractions\" />
@@ -100,6 +109,15 @@
     <Folder Include="Abstractions\Services\Authentication\" />
     <Folder Include="Features\Commands\RefreshTokenLogin\" />
     <Folder Include="Abstractions\Hubs\" />
+    <Folder Include="Repositories\IBasketItemRepositories\" />
+    <Folder Include="Repositories\IBasketRepositories\" />
+    <Folder Include="ViewModels\Baskets\" />
+    <Folder Include="Features\Commands\Basket\" />
+    <Folder Include="Features\Queries\Basket\" />
+    <Folder Include="Features\Commands\Basket\AddItemToBasket\" />
+    <Folder Include="Features\Commands\Basket\UpdateQuantity\" />
+    <Folder Include="Features\Commands\Basket\RemoveBasketItem\" />
+    <Folder Include="Features\Queries\Basket\GetBasketItems\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0" />

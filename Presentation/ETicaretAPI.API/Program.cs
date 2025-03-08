@@ -21,6 +21,7 @@ using Serilog.Sinks.PostgreSQL;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddPersistenceServices();
 builder.Services.AddInfrastructureServices();
