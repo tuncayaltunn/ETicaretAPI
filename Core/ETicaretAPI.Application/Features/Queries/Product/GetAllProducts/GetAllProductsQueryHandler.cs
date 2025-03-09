@@ -2,6 +2,7 @@
 using ETicaretAPI.Application.Repositories.IProductRepositories;
 using ETicaretAPI.Application.RequestParameters;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
 namespace ETicaretAPI.Application.Features.Queries.Product.GetAllProducts
@@ -22,23 +23,25 @@ namespace ETicaretAPI.Application.Features.Queries.Product.GetAllProducts
         public async Task<GetAllProductsQueryResponse> Handle(GetAllProductsQueryRequest request,
                                                             CancellationToken cancellationToken)
         {
-            var totalCount = _productReadRepository.GetAll(false).Count();
+            var totalProductCount = _productReadRepository.GetAll(false).Count();
             var products = _productReadRepository.GetAll(false)
             .Skip(request.Size * request.Page).Take(request.Size)
+            .Include(q => q.ProductImageFiles)
             .Select(p => new
             {
                 p.Id,
                 p.Name,
-                    p.Stock,
-                    p.Price,
-                    p.CreatedDate,
-                    p.UpdatedDate
-                }).ToList();
+                p.Stock,
+                p.Price,
+                p.CreatedDate,
+                p.UpdatedDate,
+                p.ProductImageFiles
+            }).ToList();
             _logger.LogInformation("Get All Products");
             return new()
             {
                 Products = products,
-                TotalCount = totalCount
+                TotalProductCount = totalProductCount
             };
         }
     }

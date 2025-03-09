@@ -63,6 +63,7 @@
     <None Remove="Features\Commands\Basket\UpdateQuantity\" />
     <None Remove="Features\Commands\Basket\RemoveBasketItem\" />
     <None Remove="Features\Queries\Basket\GetBasketItems\" />
+    <None Remove="Features\Commands\ProductImageFile\ChangeShowCaseImage\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abstractions\" />
@@ -118,6 +119,7 @@
     <Folder Include="Features\Commands\Basket\UpdateQuantity\" />
     <Folder Include="Features\Commands\Basket\RemoveBasketItem\" />
     <Folder Include="Features\Queries\Basket\GetBasketItems\" />
+    <Folder Include="Features\Commands\ProductImageFile\ChangeShowCaseImage\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0" />
