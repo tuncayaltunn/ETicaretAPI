@@ -67,6 +67,8 @@
     <None Remove="Features\Commands\Order\" />
     <None Remove="Features\Commands\Order\CreateOrder\" />
     <None Remove="DTOs\Order\" />
+    <None Remove="Features\Queries\Order\" />
+    <None Remove="Features\Queries\Order\GetAll\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abstractions\" />
@@ -126,6 +128,8 @@
     <Folder Include="Features\Commands\Order\" />
     <Folder Include="Features\Commands\Order\CreateOrder\" />
     <Folder Include="DTOs\Order\" />
+    <Folder Include="Features\Queries\Order\" />
+    <Folder Include="Features\Queries\Order\GetAll\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0" />
