@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ETicaretAPI.Application.Features.Commands.AppUser.CreateUser;
+using ETicaretAPI.Application.Features.Commands.AppUser.UpdatePassword;
 using ETicaretAPI.Application.Features.Queries.AppUser.LoginUser;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -30,6 +31,12 @@ namespace ETicaretAPI.API.Controllers
             return Ok(response);
         }
 
+        [HttpPost("update-password")]
+        public async Task<IActionResult> UpdatePassword([FromBody] UpdatePasswordCommandRequest updatePasswordCommandRequest)
+        {
+            UpdatePasswordCommandResponse response = await _mediator.Send(updatePasswordCommandRequest);
+            return Ok(response);
+        }
     }
 }
 

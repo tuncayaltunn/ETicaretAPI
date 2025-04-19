@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ETicaretAPI.Application.Features.Commands.AppUser.PasswordReset;
+using ETicaretAPI.Application.Features.Commands.AppUser.VerifyResetToken;
 using ETicaretAPI.Application.Features.Commands.RefreshTokenLogin;
 using ETicaretAPI.Application.Features.Queries.AppUser.LoginUser;
 using MediatR;
@@ -36,6 +38,20 @@ namespace ETicaretAPI.API.Controllers
         {
             RefreshTokenLoginCommandResponse response = await _mediator.Send(refreshTokenLoginCommandRequest);
 
+            return Ok(response);
+        }
+
+        [HttpPost("password-reset")]
+        public async Task<IActionResult> PasswordReset([FromBody] PasswordResetCommandRequest passwordResetCommandRequest)
+        {
+            PasswordResetCommandResponse response = await _mediator.Send(passwordResetCommandRequest);
+            return Ok(response);
+        }
+
+        [HttpPost("verify-reset-token")]
+        public async Task<IActionResult> VerifyResetToken([FromBody] VerifyResetTokenCommandRequest verifyResetTokenCommandRequest)
+        {
+            VerifyResetTokenCommandResponse response = await _mediator.Send(verifyResetTokenCommandRequest);
             return Ok(response);
         }
     }

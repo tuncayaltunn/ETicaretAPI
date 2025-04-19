@@ -70,6 +70,10 @@
     <None Remove="Features\Queries\Order\" />
     <None Remove="Features\Queries\Order\GetAll\" />
     <None Remove="Features\Queries\Order\GetOrderById\" />
+    <None Remove="Features\Commands\AppUser\PasswordReset\" />
+    <None Remove="Features\Commands\AppUser\VerifyResetToken\" />
+    <None Remove="Helpers\" />
+    <None Remove="Features\Commands\AppUser\UpdatePassword\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abstractions\" />
@@ -132,6 +136,10 @@
     <Folder Include="Features\Queries\Order\" />
     <Folder Include="Features\Queries\Order\GetAll\" />
     <Folder Include="Features\Queries\Order\GetOrderById\" />
+    <Folder Include="Features\Commands\AppUser\PasswordReset\" />
+    <Folder Include="Features\Commands\AppUser\VerifyResetToken\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Features\Commands\AppUser\UpdatePassword\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0" />

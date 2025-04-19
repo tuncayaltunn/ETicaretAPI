@@ -23,6 +23,7 @@ using ETicaretAPI.Persistence.Repositories.BasketRepositories;
 using ETicaretAPI.Application.Repositories.IBasketRepositories;
 using ETicaretAPI.Application.Repositories.IBasketItemRepositories;
 using ETicaretAPI.Persistence.Repositories.BasketItemRepositories;
+using Microsoft.AspNetCore.Identity;
 
 namespace ETicaretAPI.Persistence
 {
@@ -42,7 +43,8 @@ namespace ETicaretAPI.Persistence
 				options.Password.RequireLowercase = false;
 				options.Password.RequireUppercase = false;
 				options.User.RequireUniqueEmail = true;
-			}).AddEntityFrameworkStores<ETicaretAPIDbContext>();
+			}).AddEntityFrameworkStores<ETicaretAPIDbContext>()
+									.AddDefaultTokenProviders();
 
 			services.AddScoped<ICustomerReadRepository, CustomerReadRepository>();
             services.AddScoped<ICustomerWriteRepository, CustomerWriteRepository>();
