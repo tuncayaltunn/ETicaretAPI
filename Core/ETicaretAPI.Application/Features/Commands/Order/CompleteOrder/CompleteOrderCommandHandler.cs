@@ -19,6 +19,9 @@ namespace ETicaretAPI.Application.Features.Commands.Order.CompleteOrder
         public async Task<CompleteOrderCommandResponse> Handle(CompleteOrderCommandRequest request, CancellationToken cancellationToken)
         {
             (bool succeeded, CompletedOrderDTO dto) = await _orderService.CompleteOrderAsync(request.Id);
+            if (succeeded)
+                await _mailService.SendCompletedOrderMailAsync(dto.EMail, dto.OrderCode, dto.OrderDate, dto.Username);
+
             return new();
         }
     }
