@@ -76,6 +76,11 @@
     <None Remove="Features\Commands\AppUser\UpdatePassword\" />
     <None Remove="Repositories\ICompletedOrderRepositories\" />
     <None Remove="Features\Commands\Order\CompleteOrder\" />
+    <None Remove="CustomAttributes\" />
+    <None Remove="Enums\" />
+    <None Remove="Const\" />
+    <None Remove="Abstractions\Services\Configurations\" />
+    <None Remove="DTOs\Configuration\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abstractions\" />
@@ -144,6 +149,11 @@
     <Folder Include="Features\Commands\AppUser\UpdatePassword\" />
     <Folder Include="Repositories\ICompletedOrderRepositories\" />
     <Folder Include="Features\Commands\Order\CompleteOrder\" />
+    <Folder Include="CustomAttributes\" />
+    <Folder Include="Enums\" />
+    <Folder Include="Const\" />
+    <Folder Include="Abstractions\Services\Configurations\" />
+    <Folder Include="DTOs\Configuration\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0" />

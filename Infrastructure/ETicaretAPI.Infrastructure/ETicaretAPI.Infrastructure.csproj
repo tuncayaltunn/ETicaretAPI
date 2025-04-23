@@ -19,6 +19,7 @@
     <None Remove="Services\Storage\Azure\" />
     <None Remove="Enums\" />
     <None Remove="Services\Token\" />
+    <None Remove="Services\Configurations\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Filters\" />
@@ -30,6 +31,7 @@
     <Folder Include="Services\Storage\Azure\" />
     <Folder Include="Enums\" />
     <Folder Include="Services\Token\" />
+    <Folder Include="Services\Configurations\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.0" />
