@@ -81,6 +81,13 @@
     <None Remove="Const\" />
     <None Remove="Abstractions\Services\Configurations\" />
     <None Remove="DTOs\Configuration\" />
+    <None Remove="Features\Queries\Role\" />
+    <None Remove="Features\Queries\Role\GetRoleById\" />
+    <None Remove="Features\Queries\Role\GetRoles\" />
+    <None Remove="Features\Commands\Role\" />
+    <None Remove="Features\Commands\Role\CreateRole\" />
+    <None Remove="Features\Commands\Role\DeleteRole\" />
+    <None Remove="Features\Commands\Role\UpdateRole\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abstractions\" />
@@ -154,6 +161,13 @@
     <Folder Include="Const\" />
     <Folder Include="Abstractions\Services\Configurations\" />
     <Folder Include="DTOs\Configuration\" />
+    <Folder Include="Features\Queries\Role\" />
+    <Folder Include="Features\Queries\Role\GetRoleById\" />
+    <Folder Include="Features\Queries\Role\GetRoles\" />
+    <Folder Include="Features\Commands\Role\" />
+    <Folder Include="Features\Commands\Role\CreateRole\" />
+    <Folder Include="Features\Commands\Role\DeleteRole\" />
+    <Folder Include="Features\Commands\Role\UpdateRole\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0" />
