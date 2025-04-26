@@ -19,6 +19,8 @@
     <None Remove="Repositories\BasketRepositories\" />
     <None Remove="Repositories\BasketItemRepositories\" />
     <None Remove="Repositories\CompletedOrderRepositories\" />
+    <None Remove="Repositories\EndpointRepositories\" />
+    <None Remove="Repositories\MenuRepositories\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Contexts\" />
@@ -30,6 +32,8 @@
     <Folder Include="Repositories\BasketRepositories\" />
     <Folder Include="Repositories\BasketItemRepositories\" />
     <Folder Include="Repositories\CompletedOrderRepositories\" />
+    <Folder Include="Repositories\EndpointRepositories\" />
+    <Folder Include="Repositories\MenuRepositories\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />

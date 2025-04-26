@@ -9482,3 +9482,1455 @@ ORDER BY t."Id", t0."Id"
 2025-04-20 09:32:39.417 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.BasketsController.GetBasketItems (ETicaretAPI.API) in 39.3952ms
 2025-04-20 09:32:39.417 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.BasketsController.GetBasketItems (ETicaretAPI.API)'
 2025-04-20 09:32:39.418 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/api/baskets - - - 200 - application/json;+charset=utf-8 41.2893ms
+2025-04-26 07:31:50.855 +03:00 [INF] User profile is available. Using '/Users/taft/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-04-26 07:31:51.188 +03:00 [INF] Now listening on: https://localhost:7285
+2025-04-26 07:31:51.188 +03:00 [INF] Now listening on: http://localhost:5026
+2025-04-26 07:31:51.189 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-26 07:31:51.189 +03:00 [INF] Hosting environment: Development
+2025-04-26 07:31:51.189 +03:00 [INF] Content root path: /Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Presentation/ETicaretAPI.API
+2025-04-26 07:31:52.498 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7285/swagger/index.html - -
+2025-04-26 07:31:52.550 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/swagger/index.html - - - 200 - text/html;charset=utf-8 52.6362ms
+2025-04-26 07:31:52.652 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7285/swagger/v1/swagger.json - -
+2025-04-26 07:31:52.693 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 41.1662ms
+2025-04-26 07:32:18.862 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/auth/login - -
+2025-04-26 07:32:18.891 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:32:18.894 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/auth/login - - - 204 - - 33.5530ms
+2025-04-26 07:32:18.897 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7285/api/auth/login application/json 43
+2025-04-26 07:32:18.900 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:32:18.919 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.AuthController.Login (ETicaretAPI.API)'
+2025-04-26 07:32:18.941 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ETicaretAPI.Application.Features.Queries.AppUser.LoginUser.LoginUserQueryRequest) on controller ETicaretAPI.API.Controllers.AuthController (ETicaretAPI.API).
+2025-04-26 07:32:19.557 +03:00 [INF] Executed DbCommand (52ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NameSurname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-04-26 07:32:19.718 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NameSurname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-04-26 07:32:19.723 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NameSurname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2025-04-26 07:32:19.765 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[@p17='?', @p0='?' (DbType = Int32), @p1='?', @p18='?', @p2='?', @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTime), @p6='?', @p7='?', @p8='?', @p9='?', @p10='?', @p11='?' (DbType = Boolean), @p12='?', @p13='?' (DbType = DateTime), @p14='?', @p15='?' (DbType = Boolean), @p16='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "AccessFailedCount" = @p0, "ConcurrencyStamp" = @p1, "Email" = @p2, "EmailConfirmed" = @p3, "LockoutEnabled" = @p4, "LockoutEnd" = @p5, "NameSurname" = @p6, "NormalizedEmail" = @p7, "NormalizedUserName" = @p8, "PasswordHash" = @p9, "PhoneNumber" = @p10, "PhoneNumberConfirmed" = @p11, "RefreshToken" = @p12, "RefreshTokenEndDate" = @p13, "SecurityStamp" = @p14, "TwoFactorEnabled" = @p15, "UserName" = @p16
+WHERE "Id" = @p17 AND "ConcurrencyStamp" = @p18;
+2025-04-26 07:32:19.771 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Queries.AppUser.LoginUser.LoginUserSuccessCommandResponse'.
+2025-04-26 07:32:19.776 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.AuthController.Login (ETicaretAPI.API) in 834.6015ms
+2025-04-26 07:32:19.776 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.AuthController.Login (ETicaretAPI.API)'
+2025-04-26 07:32:19.780 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7285/api/auth/login application/json 43 - 200 - application/json;+charset=utf-8 882.9052ms
+2025-04-26 07:32:24.110 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=0&size=5 - -
+2025-04-26 07:32:24.111 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:32:24.112 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=0&size=5 - - - 204 - - 1.9290ms
+2025-04-26 07:32:24.113 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7285/api/roles?page=0&size=5 - -
+2025-04-26 07:32:24.113 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:32:24.176 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 07:32:24.179 +03:00 [INF] Route matched with {action = "GetRoles", controller = "Roles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRoles(ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryRequest) on controller ETicaretAPI.API.Controllers.RolesController (ETicaretAPI.API).
+2025-04-26 07:32:24.228 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "AspNetRoles" AS a
+2025-04-26 07:32:24.230 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryResponse'.
+2025-04-26 07:32:24.232 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2025-04-26 07:32:24.232 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2025-04-26 07:32:24.235 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."Name"
+FROM "AspNetRoles" AS a
+LIMIT @__p_1 OFFSET @__p_0
+2025-04-26 07:32:24.237 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API) in 58.1042ms
+2025-04-26 07:32:24.237 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 07:32:24.237 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/api/roles?page=0&size=5 - - - 200 - application/json;+charset=utf-8 124.6651ms
+2025-04-26 07:32:26.399 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/roles - -
+2025-04-26 07:32:26.400 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:32:26.400 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/roles - - - 204 - - 1.2248ms
+2025-04-26 07:32:26.402 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7285/api/roles application/json 11
+2025-04-26 07:32:26.402 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:32:26.409 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.RolesController.CreateRole (ETicaretAPI.API)'
+2025-04-26 07:32:26.412 +03:00 [INF] Route matched with {action = "CreateRole", controller = "Roles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateRole(ETicaretAPI.Application.Features.Commands.Role.CreateRole.CreateRoleCommandRequest) on controller ETicaretAPI.API.Controllers.RolesController (ETicaretAPI.API).
+2025-04-26 07:32:26.427 +03:00 [WRN] Role 9a1dc0b7-df4e-4138-bc30-48762bcd7d90 validation failed: InvalidRoleName.
+2025-04-26 07:32:26.427 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Commands.Role.CreateRole.CreateRoleCommandResponse'.
+2025-04-26 07:32:26.428 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.RolesController.CreateRole (ETicaretAPI.API) in 15.3738ms
+2025-04-26 07:32:26.428 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.RolesController.CreateRole (ETicaretAPI.API)'
+2025-04-26 07:32:26.428 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7285/api/roles application/json 11 - 200 - application/json;+charset=utf-8 26.1868ms
+2025-04-26 07:32:26.438 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7285/api/roles?page=0&size=5 - -
+2025-04-26 07:32:26.438 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:32:26.441 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 07:32:26.441 +03:00 [INF] Route matched with {action = "GetRoles", controller = "Roles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRoles(ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryRequest) on controller ETicaretAPI.API.Controllers.RolesController (ETicaretAPI.API).
+2025-04-26 07:32:26.457 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "AspNetRoles" AS a
+2025-04-26 07:32:26.457 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryResponse'.
+2025-04-26 07:32:26.459 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."Name"
+FROM "AspNetRoles" AS a
+LIMIT @__p_1 OFFSET @__p_0
+2025-04-26 07:32:26.461 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API) in 19.6622ms
+2025-04-26 07:32:26.461 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 07:32:26.461 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/api/roles?page=0&size=5 - - - 200 - application/json;+charset=utf-8 22.5775ms
+2025-04-26 07:32:31.313 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=0&size=5 - -
+2025-04-26 07:32:31.314 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:32:31.315 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=0&size=5 - - - 204 - - 1.4145ms
+2025-04-26 07:32:31.315 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7285/api/roles?page=0&size=5 - -
+2025-04-26 07:32:31.315 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:32:31.316 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 07:32:31.316 +03:00 [INF] Route matched with {action = "GetRoles", controller = "Roles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRoles(ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryRequest) on controller ETicaretAPI.API.Controllers.RolesController (ETicaretAPI.API).
+2025-04-26 07:32:31.329 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "AspNetRoles" AS a
+2025-04-26 07:32:31.329 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryResponse'.
+2025-04-26 07:32:31.405 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."Name"
+FROM "AspNetRoles" AS a
+LIMIT @__p_1 OFFSET @__p_0
+2025-04-26 07:32:31.503 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API) in 186.5667ms
+2025-04-26 07:32:31.503 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 07:32:31.503 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/api/roles?page=0&size=5 - - - 200 - application/json;+charset=utf-8 187.8081ms
+2025-04-26 07:33:07.972 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/roles - -
+2025-04-26 07:33:07.974 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:33:07.976 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/roles - - - 204 - - 4.0198ms
+2025-04-26 07:33:07.978 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7285/api/roles application/json 17
+2025-04-26 07:33:07.979 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:33:07.983 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.RolesController.CreateRole (ETicaretAPI.API)'
+2025-04-26 07:33:07.983 +03:00 [INF] Route matched with {action = "CreateRole", controller = "Roles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateRole(ETicaretAPI.Application.Features.Commands.Role.CreateRole.CreateRoleCommandRequest) on controller ETicaretAPI.API.Controllers.RolesController (ETicaretAPI.API).
+2025-04-26 07:33:08.074 +03:00 [INF] Executed DbCommand (33ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2025-04-26 07:33:08.224 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetRoles" ("Id", "ConcurrencyStamp", "Name", "NormalizedName")
+VALUES (@p0, @p1, @p2, @p3);
+2025-04-26 07:33:08.225 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Commands.Role.CreateRole.CreateRoleCommandResponse'.
+2025-04-26 07:33:08.226 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.RolesController.CreateRole (ETicaretAPI.API) in 242.1241ms
+2025-04-26 07:33:08.226 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.RolesController.CreateRole (ETicaretAPI.API)'
+2025-04-26 07:33:08.226 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7285/api/roles application/json 17 - 200 - application/json;+charset=utf-8 247.7086ms
+2025-04-26 07:33:08.232 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=0&size=5 - -
+2025-04-26 07:33:08.232 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:33:08.232 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=0&size=5 - - - 204 - - 0.2428ms
+2025-04-26 07:33:08.258 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7285/api/roles?page=0&size=5 - -
+2025-04-26 07:33:08.258 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:33:08.259 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 07:33:08.259 +03:00 [INF] Route matched with {action = "GetRoles", controller = "Roles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRoles(ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryRequest) on controller ETicaretAPI.API.Controllers.RolesController (ETicaretAPI.API).
+2025-04-26 07:33:08.264 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "AspNetRoles" AS a
+2025-04-26 07:33:08.264 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryResponse'.
+2025-04-26 07:33:08.266 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."Name"
+FROM "AspNetRoles" AS a
+LIMIT @__p_1 OFFSET @__p_0
+2025-04-26 07:33:08.267 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API) in 8.4387ms
+2025-04-26 07:33:08.267 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 07:33:08.267 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/api/roles?page=0&size=5 - - - 200 - application/json;+charset=utf-8 9.6680ms
+2025-04-26 07:33:16.434 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/roles - -
+2025-04-26 07:33:16.461 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:33:16.462 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/roles - - - 204 - - 28.2660ms
+2025-04-26 07:33:16.464 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7285/api/roles application/json 17
+2025-04-26 07:33:16.464 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:33:16.464 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.RolesController.CreateRole (ETicaretAPI.API)'
+2025-04-26 07:33:16.465 +03:00 [INF] Route matched with {action = "CreateRole", controller = "Roles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateRole(ETicaretAPI.Application.Features.Commands.Role.CreateRole.CreateRoleCommandRequest) on controller ETicaretAPI.API.Controllers.RolesController (ETicaretAPI.API).
+2025-04-26 07:33:16.499 +03:00 [INF] Executed DbCommand (29ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2025-04-26 07:33:16.874 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetRoles" ("Id", "ConcurrencyStamp", "Name", "NormalizedName")
+VALUES (@p0, @p1, @p2, @p3);
+2025-04-26 07:33:16.875 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Commands.Role.CreateRole.CreateRoleCommandResponse'.
+2025-04-26 07:33:16.876 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.RolesController.CreateRole (ETicaretAPI.API) in 410.9965ms
+2025-04-26 07:33:16.876 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.RolesController.CreateRole (ETicaretAPI.API)'
+2025-04-26 07:33:16.877 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7285/api/roles application/json 17 - 200 - application/json;+charset=utf-8 412.7940ms
+2025-04-26 07:33:16.882 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=0&size=5 - -
+2025-04-26 07:33:16.882 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:33:16.882 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=0&size=5 - - - 204 - - 0.6047ms
+2025-04-26 07:33:16.884 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7285/api/roles?page=0&size=5 - -
+2025-04-26 07:33:16.884 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:33:16.885 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 07:33:16.885 +03:00 [INF] Route matched with {action = "GetRoles", controller = "Roles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRoles(ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryRequest) on controller ETicaretAPI.API.Controllers.RolesController (ETicaretAPI.API).
+2025-04-26 07:33:16.893 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "AspNetRoles" AS a
+2025-04-26 07:33:16.893 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryResponse'.
+2025-04-26 07:33:16.945 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."Name"
+FROM "AspNetRoles" AS a
+LIMIT @__p_1 OFFSET @__p_0
+2025-04-26 07:33:16.946 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API) in 60.3345ms
+2025-04-26 07:33:16.946 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 07:33:16.946 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/api/roles?page=0&size=5 - - - 200 - application/json;+charset=utf-8 62.1753ms
+2025-04-26 07:33:18.733 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7285/api/roles application/json 17
+2025-04-26 07:33:18.734 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:33:18.735 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.RolesController.CreateRole (ETicaretAPI.API)'
+2025-04-26 07:33:18.735 +03:00 [INF] Route matched with {action = "CreateRole", controller = "Roles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateRole(ETicaretAPI.Application.Features.Commands.Role.CreateRole.CreateRoleCommandRequest) on controller ETicaretAPI.API.Controllers.RolesController (ETicaretAPI.API).
+2025-04-26 07:33:18.768 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2025-04-26 07:33:18.994 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetRoles" ("Id", "ConcurrencyStamp", "Name", "NormalizedName")
+VALUES (@p0, @p1, @p2, @p3);
+2025-04-26 07:33:18.995 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Commands.Role.CreateRole.CreateRoleCommandResponse'.
+2025-04-26 07:33:18.995 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.RolesController.CreateRole (ETicaretAPI.API) in 260.3235ms
+2025-04-26 07:33:18.995 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.RolesController.CreateRole (ETicaretAPI.API)'
+2025-04-26 07:33:18.996 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7285/api/roles application/json 17 - 200 - application/json;+charset=utf-8 262.3410ms
+2025-04-26 07:33:18.999 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7285/api/roles?page=0&size=5 - -
+2025-04-26 07:33:19.000 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:33:19.001 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 07:33:19.001 +03:00 [INF] Route matched with {action = "GetRoles", controller = "Roles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRoles(ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryRequest) on controller ETicaretAPI.API.Controllers.RolesController (ETicaretAPI.API).
+2025-04-26 07:33:19.009 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "AspNetRoles" AS a
+2025-04-26 07:33:19.010 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryResponse'.
+2025-04-26 07:33:19.059 +03:00 [INF] Executed DbCommand (25ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."Name"
+FROM "AspNetRoles" AS a
+LIMIT @__p_1 OFFSET @__p_0
+2025-04-26 07:33:19.158 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API) in 156.7197ms
+2025-04-26 07:33:19.158 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 07:33:19.159 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/api/roles?page=0&size=5 - - - 200 - application/json;+charset=utf-8 159.1976ms
+2025-04-26 07:33:21.141 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7285/api/roles application/json 17
+2025-04-26 07:33:21.142 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:33:21.143 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.RolesController.CreateRole (ETicaretAPI.API)'
+2025-04-26 07:33:21.143 +03:00 [INF] Route matched with {action = "CreateRole", controller = "Roles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateRole(ETicaretAPI.Application.Features.Commands.Role.CreateRole.CreateRoleCommandRequest) on controller ETicaretAPI.API.Controllers.RolesController (ETicaretAPI.API).
+2025-04-26 07:33:21.224 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2025-04-26 07:33:21.332 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetRoles" ("Id", "ConcurrencyStamp", "Name", "NormalizedName")
+VALUES (@p0, @p1, @p2, @p3);
+2025-04-26 07:33:21.333 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Commands.Role.CreateRole.CreateRoleCommandResponse'.
+2025-04-26 07:33:21.333 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.RolesController.CreateRole (ETicaretAPI.API) in 189.7871ms
+2025-04-26 07:33:21.333 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.RolesController.CreateRole (ETicaretAPI.API)'
+2025-04-26 07:33:21.333 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7285/api/roles application/json 17 - 200 - application/json;+charset=utf-8 192.1094ms
+2025-04-26 07:33:21.338 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7285/api/roles?page=0&size=5 - -
+2025-04-26 07:33:21.338 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:33:21.340 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 07:33:21.340 +03:00 [INF] Route matched with {action = "GetRoles", controller = "Roles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRoles(ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryRequest) on controller ETicaretAPI.API.Controllers.RolesController (ETicaretAPI.API).
+2025-04-26 07:33:21.351 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "AspNetRoles" AS a
+2025-04-26 07:33:21.351 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryResponse'.
+2025-04-26 07:33:21.429 +03:00 [INF] Executed DbCommand (75ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."Name"
+FROM "AspNetRoles" AS a
+LIMIT @__p_1 OFFSET @__p_0
+2025-04-26 07:33:21.478 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API) in 137.9178ms
+2025-04-26 07:33:21.478 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 07:33:21.478 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/api/roles?page=0&size=5 - - - 200 - application/json;+charset=utf-8 140.2507ms
+2025-04-26 07:33:23.886 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/roles - -
+2025-04-26 07:33:23.887 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:33:23.888 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/roles - - - 204 - - 1.2569ms
+2025-04-26 07:33:23.889 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7285/api/roles application/json 17
+2025-04-26 07:33:23.889 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:33:23.890 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.RolesController.CreateRole (ETicaretAPI.API)'
+2025-04-26 07:33:23.891 +03:00 [INF] Route matched with {action = "CreateRole", controller = "Roles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateRole(ETicaretAPI.Application.Features.Commands.Role.CreateRole.CreateRoleCommandRequest) on controller ETicaretAPI.API.Controllers.RolesController (ETicaretAPI.API).
+2025-04-26 07:33:23.902 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2025-04-26 07:33:23.932 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetRoles" ("Id", "ConcurrencyStamp", "Name", "NormalizedName")
+VALUES (@p0, @p1, @p2, @p3);
+2025-04-26 07:33:23.933 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Commands.Role.CreateRole.CreateRoleCommandResponse'.
+2025-04-26 07:33:23.934 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.RolesController.CreateRole (ETicaretAPI.API) in 43.2802ms
+2025-04-26 07:33:23.934 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.RolesController.CreateRole (ETicaretAPI.API)'
+2025-04-26 07:33:23.934 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7285/api/roles application/json 17 - 200 - application/json;+charset=utf-8 45.3012ms
+2025-04-26 07:33:23.943 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=0&size=5 - -
+2025-04-26 07:33:23.943 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:33:23.944 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=0&size=5 - - - 204 - - 0.8604ms
+2025-04-26 07:33:23.945 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7285/api/roles?page=0&size=5 - -
+2025-04-26 07:33:23.945 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:33:23.946 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 07:33:23.946 +03:00 [INF] Route matched with {action = "GetRoles", controller = "Roles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRoles(ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryRequest) on controller ETicaretAPI.API.Controllers.RolesController (ETicaretAPI.API).
+2025-04-26 07:33:23.953 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "AspNetRoles" AS a
+2025-04-26 07:33:23.953 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryResponse'.
+2025-04-26 07:33:24.002 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."Name"
+FROM "AspNetRoles" AS a
+LIMIT @__p_1 OFFSET @__p_0
+2025-04-26 07:33:24.079 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API) in 133.167ms
+2025-04-26 07:33:24.080 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 07:33:24.080 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/api/roles?page=0&size=5 - - - 200 - application/json;+charset=utf-8 134.9644ms
+2025-04-26 07:33:28.317 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7285/api/roles application/json 17
+2025-04-26 07:33:28.318 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:33:28.320 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.RolesController.CreateRole (ETicaretAPI.API)'
+2025-04-26 07:33:28.320 +03:00 [INF] Route matched with {action = "CreateRole", controller = "Roles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateRole(ETicaretAPI.Application.Features.Commands.Role.CreateRole.CreateRoleCommandRequest) on controller ETicaretAPI.API.Controllers.RolesController (ETicaretAPI.API).
+2025-04-26 07:33:28.378 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2025-04-26 07:33:28.481 +03:00 [INF] Executed DbCommand (29ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetRoles" ("Id", "ConcurrencyStamp", "Name", "NormalizedName")
+VALUES (@p0, @p1, @p2, @p3);
+2025-04-26 07:33:28.481 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Commands.Role.CreateRole.CreateRoleCommandResponse'.
+2025-04-26 07:33:28.482 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.RolesController.CreateRole (ETicaretAPI.API) in 161.5903ms
+2025-04-26 07:33:28.482 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.RolesController.CreateRole (ETicaretAPI.API)'
+2025-04-26 07:33:28.482 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7285/api/roles application/json 17 - 200 - application/json;+charset=utf-8 164.8120ms
+2025-04-26 07:33:28.484 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7285/api/roles?page=0&size=5 - -
+2025-04-26 07:33:28.484 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:33:28.484 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 07:33:28.484 +03:00 [INF] Route matched with {action = "GetRoles", controller = "Roles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRoles(ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryRequest) on controller ETicaretAPI.API.Controllers.RolesController (ETicaretAPI.API).
+2025-04-26 07:33:28.490 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "AspNetRoles" AS a
+2025-04-26 07:33:28.490 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryResponse'.
+2025-04-26 07:33:28.497 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."Name"
+FROM "AspNetRoles" AS a
+LIMIT @__p_1 OFFSET @__p_0
+2025-04-26 07:33:28.498 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API) in 13.2967ms
+2025-04-26 07:33:28.498 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 07:33:28.498 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/api/roles?page=0&size=5 - - - 200 - application/json;+charset=utf-8 14.3475ms
+2025-04-26 07:33:30.831 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/roles - -
+2025-04-26 07:33:30.831 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:33:30.832 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/roles - - - 204 - - 1.0510ms
+2025-04-26 07:33:30.833 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7285/api/roles application/json 17
+2025-04-26 07:33:30.833 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:33:30.835 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.RolesController.CreateRole (ETicaretAPI.API)'
+2025-04-26 07:33:30.835 +03:00 [INF] Route matched with {action = "CreateRole", controller = "Roles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateRole(ETicaretAPI.Application.Features.Commands.Role.CreateRole.CreateRoleCommandRequest) on controller ETicaretAPI.API.Controllers.RolesController (ETicaretAPI.API).
+2025-04-26 07:33:30.936 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2025-04-26 07:33:31.094 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetRoles" ("Id", "ConcurrencyStamp", "Name", "NormalizedName")
+VALUES (@p0, @p1, @p2, @p3);
+2025-04-26 07:33:31.094 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Commands.Role.CreateRole.CreateRoleCommandResponse'.
+2025-04-26 07:33:31.095 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.RolesController.CreateRole (ETicaretAPI.API) in 259.165ms
+2025-04-26 07:33:31.095 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.RolesController.CreateRole (ETicaretAPI.API)'
+2025-04-26 07:33:31.095 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7285/api/roles application/json 17 - 200 - application/json;+charset=utf-8 261.7722ms
+2025-04-26 07:33:31.100 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=0&size=5 - -
+2025-04-26 07:33:31.100 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:33:31.101 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=0&size=5 - - - 204 - - 0.3926ms
+2025-04-26 07:33:31.101 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7285/api/roles?page=0&size=5 - -
+2025-04-26 07:33:31.102 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:33:31.103 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 07:33:31.103 +03:00 [INF] Route matched with {action = "GetRoles", controller = "Roles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRoles(ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryRequest) on controller ETicaretAPI.API.Controllers.RolesController (ETicaretAPI.API).
+2025-04-26 07:33:31.110 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "AspNetRoles" AS a
+2025-04-26 07:33:31.110 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryResponse'.
+2025-04-26 07:33:31.185 +03:00 [INF] Executed DbCommand (49ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."Name"
+FROM "AspNetRoles" AS a
+LIMIT @__p_1 OFFSET @__p_0
+2025-04-26 07:33:31.258 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API) in 154.7719ms
+2025-04-26 07:33:31.258 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 07:33:31.259 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/api/roles?page=0&size=5 - - - 200 - application/json;+charset=utf-8 157.4514ms
+2025-04-26 07:33:33.815 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7285/api/roles application/json 17
+2025-04-26 07:33:33.815 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:33:33.815 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.RolesController.CreateRole (ETicaretAPI.API)'
+2025-04-26 07:33:33.816 +03:00 [INF] Route matched with {action = "CreateRole", controller = "Roles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateRole(ETicaretAPI.Application.Features.Commands.Role.CreateRole.CreateRoleCommandRequest) on controller ETicaretAPI.API.Controllers.RolesController (ETicaretAPI.API).
+2025-04-26 07:33:33.847 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2025-04-26 07:33:34.118 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetRoles" ("Id", "ConcurrencyStamp", "Name", "NormalizedName")
+VALUES (@p0, @p1, @p2, @p3);
+2025-04-26 07:33:34.119 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Commands.Role.CreateRole.CreateRoleCommandResponse'.
+2025-04-26 07:33:34.120 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.RolesController.CreateRole (ETicaretAPI.API) in 303.9825ms
+2025-04-26 07:33:34.120 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.RolesController.CreateRole (ETicaretAPI.API)'
+2025-04-26 07:33:34.120 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7285/api/roles application/json 17 - 200 - application/json;+charset=utf-8 305.4891ms
+2025-04-26 07:33:34.129 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7285/api/roles?page=0&size=5 - -
+2025-04-26 07:33:34.129 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:33:34.130 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 07:33:34.130 +03:00 [INF] Route matched with {action = "GetRoles", controller = "Roles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRoles(ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryRequest) on controller ETicaretAPI.API.Controllers.RolesController (ETicaretAPI.API).
+2025-04-26 07:33:34.136 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "AspNetRoles" AS a
+2025-04-26 07:33:34.136 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryResponse'.
+2025-04-26 07:33:34.166 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."Name"
+FROM "AspNetRoles" AS a
+LIMIT @__p_1 OFFSET @__p_0
+2025-04-26 07:33:34.191 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API) in 60.5145ms
+2025-04-26 07:33:34.191 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 07:33:34.194 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/api/roles?page=0&size=5 - - - 200 - application/json;+charset=utf-8 64.3907ms
+2025-04-26 07:33:36.807 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/roles - -
+2025-04-26 07:33:36.807 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:33:36.808 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/roles - - - 204 - - 0.4326ms
+2025-04-26 07:33:36.809 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7285/api/roles application/json 17
+2025-04-26 07:33:36.809 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:33:36.810 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.RolesController.CreateRole (ETicaretAPI.API)'
+2025-04-26 07:33:36.810 +03:00 [INF] Route matched with {action = "CreateRole", controller = "Roles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateRole(ETicaretAPI.Application.Features.Commands.Role.CreateRole.CreateRoleCommandRequest) on controller ETicaretAPI.API.Controllers.RolesController (ETicaretAPI.API).
+2025-04-26 07:33:36.887 +03:00 [INF] Executed DbCommand (27ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2025-04-26 07:33:37.114 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetRoles" ("Id", "ConcurrencyStamp", "Name", "NormalizedName")
+VALUES (@p0, @p1, @p2, @p3);
+2025-04-26 07:33:37.115 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Commands.Role.CreateRole.CreateRoleCommandResponse'.
+2025-04-26 07:33:37.115 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.RolesController.CreateRole (ETicaretAPI.API) in 305.5388ms
+2025-04-26 07:33:37.116 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.RolesController.CreateRole (ETicaretAPI.API)'
+2025-04-26 07:33:37.117 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7285/api/roles application/json 17 - 200 - application/json;+charset=utf-8 307.9380ms
+2025-04-26 07:33:37.140 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=0&size=5 - -
+2025-04-26 07:33:37.141 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:33:37.141 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=0&size=5 - - - 204 - - 0.5285ms
+2025-04-26 07:33:37.143 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7285/api/roles?page=0&size=5 - -
+2025-04-26 07:33:37.143 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:33:37.144 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 07:33:37.144 +03:00 [INF] Route matched with {action = "GetRoles", controller = "Roles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRoles(ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryRequest) on controller ETicaretAPI.API.Controllers.RolesController (ETicaretAPI.API).
+2025-04-26 07:33:37.152 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "AspNetRoles" AS a
+2025-04-26 07:33:37.152 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryResponse'.
+2025-04-26 07:33:37.177 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."Name"
+FROM "AspNetRoles" AS a
+LIMIT @__p_1 OFFSET @__p_0
+2025-04-26 07:33:37.256 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API) in 111.6906ms
+2025-04-26 07:33:37.256 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 07:33:37.257 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/api/roles?page=0&size=5 - - - 200 - application/json;+charset=utf-8 114.0242ms
+2025-04-26 07:33:41.212 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7285/api/roles application/json 18
+2025-04-26 07:33:41.213 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:33:41.215 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.RolesController.CreateRole (ETicaretAPI.API)'
+2025-04-26 07:33:41.215 +03:00 [INF] Route matched with {action = "CreateRole", controller = "Roles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateRole(ETicaretAPI.Application.Features.Commands.Role.CreateRole.CreateRoleCommandRequest) on controller ETicaretAPI.API.Controllers.RolesController (ETicaretAPI.API).
+2025-04-26 07:33:41.245 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2025-04-26 07:33:41.474 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetRoles" ("Id", "ConcurrencyStamp", "Name", "NormalizedName")
+VALUES (@p0, @p1, @p2, @p3);
+2025-04-26 07:33:41.475 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Commands.Role.CreateRole.CreateRoleCommandResponse'.
+2025-04-26 07:33:41.476 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.RolesController.CreateRole (ETicaretAPI.API) in 261.251ms
+2025-04-26 07:33:41.476 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.RolesController.CreateRole (ETicaretAPI.API)'
+2025-04-26 07:33:41.477 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7285/api/roles application/json 18 - 200 - application/json;+charset=utf-8 264.6732ms
+2025-04-26 07:33:41.482 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7285/api/roles?page=0&size=5 - -
+2025-04-26 07:33:41.482 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:33:41.483 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 07:33:41.483 +03:00 [INF] Route matched with {action = "GetRoles", controller = "Roles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRoles(ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryRequest) on controller ETicaretAPI.API.Controllers.RolesController (ETicaretAPI.API).
+2025-04-26 07:33:41.487 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "AspNetRoles" AS a
+2025-04-26 07:33:41.488 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryResponse'.
+2025-04-26 07:33:41.516 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."Name"
+FROM "AspNetRoles" AS a
+LIMIT @__p_1 OFFSET @__p_0
+2025-04-26 07:33:41.590 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API) in 106.5971ms
+2025-04-26 07:33:41.590 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 07:33:41.590 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/api/roles?page=0&size=5 - - - 200 - application/json;+charset=utf-8 107.9919ms
+2025-04-26 07:33:45.409 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/roles - -
+2025-04-26 07:33:45.409 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:33:45.410 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/roles - - - 204 - - 1.3217ms
+2025-04-26 07:33:45.412 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7285/api/roles application/json 18
+2025-04-26 07:33:45.412 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:33:45.413 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.RolesController.CreateRole (ETicaretAPI.API)'
+2025-04-26 07:33:45.413 +03:00 [INF] Route matched with {action = "CreateRole", controller = "Roles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateRole(ETicaretAPI.Application.Features.Commands.Role.CreateRole.CreateRoleCommandRequest) on controller ETicaretAPI.API.Controllers.RolesController (ETicaretAPI.API).
+2025-04-26 07:33:45.451 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2025-04-26 07:33:45.577 +03:00 [INF] Executed DbCommand (27ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetRoles" ("Id", "ConcurrencyStamp", "Name", "NormalizedName")
+VALUES (@p0, @p1, @p2, @p3);
+2025-04-26 07:33:45.579 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Commands.Role.CreateRole.CreateRoleCommandResponse'.
+2025-04-26 07:33:45.579 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.RolesController.CreateRole (ETicaretAPI.API) in 165.6682ms
+2025-04-26 07:33:45.579 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.RolesController.CreateRole (ETicaretAPI.API)'
+2025-04-26 07:33:45.580 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7285/api/roles application/json 18 - 200 - application/json;+charset=utf-8 167.6867ms
+2025-04-26 07:33:45.586 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=0&size=5 - -
+2025-04-26 07:33:45.586 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:33:45.586 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=0&size=5 - - - 204 - - 0.5407ms
+2025-04-26 07:33:45.588 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7285/api/roles?page=0&size=5 - -
+2025-04-26 07:33:45.588 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:33:45.589 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 07:33:45.589 +03:00 [INF] Route matched with {action = "GetRoles", controller = "Roles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRoles(ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryRequest) on controller ETicaretAPI.API.Controllers.RolesController (ETicaretAPI.API).
+2025-04-26 07:33:45.596 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "AspNetRoles" AS a
+2025-04-26 07:33:45.597 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryResponse'.
+2025-04-26 07:33:45.648 +03:00 [INF] Executed DbCommand (29ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."Name"
+FROM "AspNetRoles" AS a
+LIMIT @__p_1 OFFSET @__p_0
+2025-04-26 07:33:45.698 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API) in 109.1656ms
+2025-04-26 07:33:45.746 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 07:33:45.772 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/api/roles?page=0&size=5 - - - 200 - application/json;+charset=utf-8 184.0500ms
+2025-04-26 07:33:51.554 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=1&size=5 - -
+2025-04-26 07:33:51.555 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:33:51.556 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=1&size=5 - - - 204 - - 1.4250ms
+2025-04-26 07:33:51.557 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7285/api/roles?page=1&size=5 - -
+2025-04-26 07:33:51.557 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:33:51.558 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 07:33:51.558 +03:00 [INF] Route matched with {action = "GetRoles", controller = "Roles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRoles(ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryRequest) on controller ETicaretAPI.API.Controllers.RolesController (ETicaretAPI.API).
+2025-04-26 07:33:51.565 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "AspNetRoles" AS a
+2025-04-26 07:33:51.566 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryResponse'.
+2025-04-26 07:33:51.569 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2025-04-26 07:33:51.569 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2025-04-26 07:33:51.625 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."Name"
+FROM "AspNetRoles" AS a
+LIMIT @__p_0 OFFSET @__p_0
+2025-04-26 07:33:51.673 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API) in 115.0203ms
+2025-04-26 07:33:51.674 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 07:33:51.674 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/api/roles?page=1&size=5 - - - 200 - application/json;+charset=utf-8 117.0973ms
+2025-04-26 07:33:52.667 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=2&size=5 - -
+2025-04-26 07:33:52.668 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:33:52.668 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=2&size=5 - - - 204 - - 0.6156ms
+2025-04-26 07:33:52.669 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7285/api/roles?page=2&size=5 - -
+2025-04-26 07:33:52.669 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:33:52.670 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 07:33:52.670 +03:00 [INF] Route matched with {action = "GetRoles", controller = "Roles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRoles(ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryRequest) on controller ETicaretAPI.API.Controllers.RolesController (ETicaretAPI.API).
+2025-04-26 07:33:52.675 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "AspNetRoles" AS a
+2025-04-26 07:33:52.676 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryResponse'.
+2025-04-26 07:33:52.679 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."Name"
+FROM "AspNetRoles" AS a
+LIMIT @__p_1 OFFSET @__p_0
+2025-04-26 07:33:52.680 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API) in 9.918ms
+2025-04-26 07:33:52.681 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 07:33:52.681 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/api/roles?page=2&size=5 - - - 200 - application/json;+charset=utf-8 11.8087ms
+2025-04-26 07:33:56.986 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/roles - -
+2025-04-26 07:33:56.986 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:33:56.986 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/roles - - - 204 - - 0.3935ms
+2025-04-26 07:33:56.987 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7285/api/roles application/json 18
+2025-04-26 07:33:56.987 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:33:56.988 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.RolesController.CreateRole (ETicaretAPI.API)'
+2025-04-26 07:33:56.988 +03:00 [INF] Route matched with {action = "CreateRole", controller = "Roles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateRole(ETicaretAPI.Application.Features.Commands.Role.CreateRole.CreateRoleCommandRequest) on controller ETicaretAPI.API.Controllers.RolesController (ETicaretAPI.API).
+2025-04-26 07:33:57.035 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2025-04-26 07:33:57.345 +03:00 [INF] Executed DbCommand (27ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetRoles" ("Id", "ConcurrencyStamp", "Name", "NormalizedName")
+VALUES (@p0, @p1, @p2, @p3);
+2025-04-26 07:33:57.345 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Commands.Role.CreateRole.CreateRoleCommandResponse'.
+2025-04-26 07:33:57.346 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.RolesController.CreateRole (ETicaretAPI.API) in 357.8471ms
+2025-04-26 07:33:57.346 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.RolesController.CreateRole (ETicaretAPI.API)'
+2025-04-26 07:33:57.346 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7285/api/roles application/json 18 - 200 - application/json;+charset=utf-8 358.8060ms
+2025-04-26 07:33:57.350 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7285/api/roles?page=2&size=5 - -
+2025-04-26 07:33:57.350 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:33:57.350 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 07:33:57.350 +03:00 [INF] Route matched with {action = "GetRoles", controller = "Roles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRoles(ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryRequest) on controller ETicaretAPI.API.Controllers.RolesController (ETicaretAPI.API).
+2025-04-26 07:33:57.356 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "AspNetRoles" AS a
+2025-04-26 07:33:57.357 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryResponse'.
+2025-04-26 07:33:57.362 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."Name"
+FROM "AspNetRoles" AS a
+LIMIT @__p_1 OFFSET @__p_0
+2025-04-26 07:33:57.363 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API) in 12.4292ms
+2025-04-26 07:33:57.363 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 07:33:57.364 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/api/roles?page=2&size=5 - - - 200 - application/json;+charset=utf-8 14.0825ms
+2025-04-26 07:34:00.819 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/roles/8f7cb729-806e-4b23-be50-284899488dd9 - -
+2025-04-26 07:34:00.819 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:34:00.820 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/roles/8f7cb729-806e-4b23-be50-284899488dd9 - - - 204 - - 0.9790ms
+2025-04-26 07:34:00.821 +03:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:7285/api/roles/8f7cb729-806e-4b23-be50-284899488dd9 - -
+2025-04-26 07:34:00.822 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:34:00.823 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.RolesController.DeleteRole (ETicaretAPI.API)'
+2025-04-26 07:34:00.830 +03:00 [INF] Route matched with {action = "DeleteRole", controller = "Roles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteRole(ETicaretAPI.Application.Features.Commands.Role.DeleteRole.DeleteRoleCommandRequest) on controller ETicaretAPI.API.Controllers.RolesController (ETicaretAPI.API).
+2025-04-26 07:34:00.908 +03:00 [INF] Executed DbCommand (26ms) [Parameters=[@__roleId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."Id" = @__roleId_0
+LIMIT 1
+2025-04-26 07:34:00.950 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@p0='?', @p1='?'], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "AspNetRoles"
+WHERE "Id" = @p0 AND "ConcurrencyStamp" IS NULL;
+2025-04-26 07:34:00.954 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Commands.Role.DeleteRole.DeleteRoleCommandResponse'.
+2025-04-26 07:34:00.954 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.RolesController.DeleteRole (ETicaretAPI.API) in 124.1442ms
+2025-04-26 07:34:00.954 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.RolesController.DeleteRole (ETicaretAPI.API)'
+2025-04-26 07:34:00.954 +03:00 [INF] Request finished HTTP/1.1 DELETE https://localhost:7285/api/roles/8f7cb729-806e-4b23-be50-284899488dd9 - - - 200 - application/json;+charset=utf-8 133.4262ms
+2025-04-26 07:34:01.662 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=2&size=5 - -
+2025-04-26 07:34:01.662 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:34:01.662 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=2&size=5 - - - 204 - - 0.5576ms
+2025-04-26 07:34:01.663 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7285/api/roles?page=2&size=5 - -
+2025-04-26 07:34:01.664 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:34:01.665 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 07:34:01.665 +03:00 [INF] Route matched with {action = "GetRoles", controller = "Roles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRoles(ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryRequest) on controller ETicaretAPI.API.Controllers.RolesController (ETicaretAPI.API).
+2025-04-26 07:34:01.673 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "AspNetRoles" AS a
+2025-04-26 07:34:01.673 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryResponse'.
+2025-04-26 07:34:01.725 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."Name"
+FROM "AspNetRoles" AS a
+LIMIT @__p_1 OFFSET @__p_0
+2025-04-26 07:34:01.863 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API) in 176.6292ms
+2025-04-26 07:34:01.886 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 07:34:01.886 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/api/roles?page=2&size=5 - - - 200 - application/json;+charset=utf-8 223.0335ms
+2025-04-26 07:35:15.381 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=0&size=5 - -
+2025-04-26 07:35:15.383 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:35:15.384 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=0&size=5 - - - 204 - - 3.0234ms
+2025-04-26 07:35:15.409 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7285/api/roles?page=0&size=5 - -
+2025-04-26 07:35:15.410 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:35:15.413 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 07:35:15.414 +03:00 [INF] Route matched with {action = "GetRoles", controller = "Roles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRoles(ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryRequest) on controller ETicaretAPI.API.Controllers.RolesController (ETicaretAPI.API).
+2025-04-26 07:35:15.443 +03:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "AspNetRoles" AS a
+2025-04-26 07:35:15.443 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryResponse'.
+2025-04-26 07:35:15.452 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."Name"
+FROM "AspNetRoles" AS a
+LIMIT @__p_1 OFFSET @__p_0
+2025-04-26 07:35:15.453 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API) in 38.8367ms
+2025-04-26 07:35:15.453 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 07:35:15.453 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/api/roles?page=0&size=5 - - - 200 - application/json;+charset=utf-8 44.0191ms
+2025-04-26 07:35:18.377 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/ApplicationServices - -
+2025-04-26 07:35:18.377 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:35:18.377 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/ApplicationServices - - - 204 - - 0.2635ms
+2025-04-26 07:35:18.378 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7285/api/ApplicationServices - -
+2025-04-26 07:35:18.378 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:35:18.378 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.ApplicationServicesController.GetAuthorizeDefinitionEndpoints (ETicaretAPI.API)'
+2025-04-26 07:35:18.381 +03:00 [INF] Route matched with {action = "GetAuthorizeDefinitionEndpoints", controller = "ApplicationServices"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAuthorizeDefinitionEndpoints() on controller ETicaretAPI.API.Controllers.ApplicationServicesController (ETicaretAPI.API).
+2025-04-26 07:35:18.392 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ETicaretAPI.Application.DTOs.Configuration.Menu, ETicaretAPI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-26 07:35:18.394 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.ApplicationServicesController.GetAuthorizeDefinitionEndpoints (ETicaretAPI.API) in 13.1276ms
+2025-04-26 07:35:18.394 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.ApplicationServicesController.GetAuthorizeDefinitionEndpoints (ETicaretAPI.API)'
+2025-04-26 07:35:18.395 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/api/ApplicationServices - - - 200 - application/json;+charset=utf-8 16.8830ms
+2025-04-26 07:35:27.569 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/AuthorizationEndpoints/GetRolesToEndpoint - -
+2025-04-26 07:35:27.570 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:35:27.570 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/AuthorizationEndpoints/GetRolesToEndpoint - - - 204 - - 1.3756ms
+2025-04-26 07:35:27.597 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7285/api/AuthorizationEndpoints/GetRolesToEndpoint application/json 84
+2025-04-26 07:35:27.597 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:35:27.599 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7285/api/AuthorizationEndpoints/GetRolesToEndpoint application/json 84 - 404 0 - 1.9543ms
+2025-04-26 07:35:58.527 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/AuthorizationEndpoints/GetRolesToEndpoint - -
+2025-04-26 07:35:58.530 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:35:58.531 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/AuthorizationEndpoints/GetRolesToEndpoint - - - 204 - - 3.8050ms
+2025-04-26 07:35:58.533 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7285/api/AuthorizationEndpoints/GetRolesToEndpoint application/json 55
+2025-04-26 07:35:58.534 +03:00 [INF] CORS policy execution successful.
+2025-04-26 07:35:58.535 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7285/api/AuthorizationEndpoints/GetRolesToEndpoint application/json 55 - 404 0 - 1.3939ms
+2025-04-26 12:12:38.302 +03:00 [INF] User profile is available. Using '/Users/taft/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-04-26 12:12:38.674 +03:00 [INF] Now listening on: https://localhost:7285
+2025-04-26 12:12:38.674 +03:00 [INF] Now listening on: http://localhost:5026
+2025-04-26 12:12:38.675 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-26 12:12:38.675 +03:00 [INF] Hosting environment: Development
+2025-04-26 12:12:38.675 +03:00 [INF] Content root path: /Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Presentation/ETicaretAPI.API
+2025-04-26 12:12:39.983 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7285/swagger/index.html - -
+2025-04-26 12:12:40.033 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/swagger/index.html - - - 200 - text/html;charset=utf-8 50.0000ms
+2025-04-26 12:12:40.331 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7285/swagger/v1/swagger.json - -
+2025-04-26 12:12:40.409 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 77.9225ms
+2025-04-26 12:13:23.790 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/auth/login - -
+2025-04-26 12:13:23.810 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:13:23.817 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/auth/login - - - 204 - - 26.6082ms
+2025-04-26 12:13:23.844 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7285/api/auth/login application/json 43
+2025-04-26 12:13:23.848 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:13:23.864 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.AuthController.Login (ETicaretAPI.API)'
+2025-04-26 12:13:23.880 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ETicaretAPI.Application.Features.Queries.AppUser.LoginUser.LoginUserQueryRequest) on controller ETicaretAPI.API.Controllers.AuthController (ETicaretAPI.API).
+2025-04-26 12:13:24.441 +03:00 [INF] Executed DbCommand (22ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NameSurname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-04-26 12:13:24.632 +03:00 [INF] Executed DbCommand (46ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NameSurname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-04-26 12:13:24.643 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedEmail_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NameSurname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2025-04-26 12:13:24.678 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@p17='?', @p0='?' (DbType = Int32), @p1='?', @p18='?', @p2='?', @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTime), @p6='?', @p7='?', @p8='?', @p9='?', @p10='?', @p11='?' (DbType = Boolean), @p12='?', @p13='?' (DbType = DateTime), @p14='?', @p15='?' (DbType = Boolean), @p16='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "AccessFailedCount" = @p0, "ConcurrencyStamp" = @p1, "Email" = @p2, "EmailConfirmed" = @p3, "LockoutEnabled" = @p4, "LockoutEnd" = @p5, "NameSurname" = @p6, "NormalizedEmail" = @p7, "NormalizedUserName" = @p8, "PasswordHash" = @p9, "PhoneNumber" = @p10, "PhoneNumberConfirmed" = @p11, "RefreshToken" = @p12, "RefreshTokenEndDate" = @p13, "SecurityStamp" = @p14, "TwoFactorEnabled" = @p15, "UserName" = @p16
+WHERE "Id" = @p17 AND "ConcurrencyStamp" = @p18;
+2025-04-26 12:13:24.684 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Queries.AppUser.LoginUser.LoginUserSuccessCommandResponse'.
+2025-04-26 12:13:24.689 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.AuthController.Login (ETicaretAPI.API) in 807.017ms
+2025-04-26 12:13:24.689 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.AuthController.Login (ETicaretAPI.API)'
+2025-04-26 12:13:24.692 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7285/api/auth/login application/json 43 - 200 - application/json;+charset=utf-8 848.2287ms
+2025-04-26 12:13:26.937 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=0&size=5 - -
+2025-04-26 12:13:26.938 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:13:26.938 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=0&size=5 - - - 204 - - 1.4034ms
+2025-04-26 12:13:26.940 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7285/api/roles?page=0&size=5 - -
+2025-04-26 12:13:26.940 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:13:27.002 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 12:13:27.004 +03:00 [INF] Route matched with {action = "GetRoles", controller = "Roles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRoles(ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryRequest) on controller ETicaretAPI.API.Controllers.RolesController (ETicaretAPI.API).
+2025-04-26 12:13:27.051 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "AspNetRoles" AS a
+2025-04-26 12:13:27.053 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryResponse'.
+2025-04-26 12:13:27.055 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2025-04-26 12:13:27.055 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2025-04-26 12:13:27.107 +03:00 [INF] Executed DbCommand (26ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."Name"
+FROM "AspNetRoles" AS a
+LIMIT @__p_1 OFFSET @__p_0
+2025-04-26 12:13:27.135 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API) in 130.7632ms
+2025-04-26 12:13:27.135 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 12:13:27.136 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/api/roles?page=0&size=5 - - - 200 - application/json;+charset=utf-8 195.9355ms
+2025-04-26 12:13:28.144 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/ApplicationServices - -
+2025-04-26 12:13:28.144 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:13:28.144 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/ApplicationServices - - - 204 - - 0.7761ms
+2025-04-26 12:13:28.145 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7285/api/ApplicationServices - -
+2025-04-26 12:13:28.145 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:13:28.149 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.ApplicationServicesController.GetAuthorizeDefinitionEndpoints (ETicaretAPI.API)'
+2025-04-26 12:13:28.150 +03:00 [INF] Route matched with {action = "GetAuthorizeDefinitionEndpoints", controller = "ApplicationServices"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAuthorizeDefinitionEndpoints() on controller ETicaretAPI.API.Controllers.ApplicationServicesController (ETicaretAPI.API).
+2025-04-26 12:13:28.157 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ETicaretAPI.Application.DTOs.Configuration.Menu, ETicaretAPI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-26 12:13:28.159 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.ApplicationServicesController.GetAuthorizeDefinitionEndpoints (ETicaretAPI.API) in 8.4977ms
+2025-04-26 12:13:28.159 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.ApplicationServicesController.GetAuthorizeDefinitionEndpoints (ETicaretAPI.API)'
+2025-04-26 12:13:28.159 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/api/ApplicationServices - - - 200 - application/json;+charset=utf-8 13.8440ms
+2025-04-26 12:13:31.289 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/AuthorizationEndpoints/GetRolesToEndpoint - -
+2025-04-26 12:13:31.290 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:13:31.291 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/AuthorizationEndpoints/GetRolesToEndpoint - - - 204 - - 1.2327ms
+2025-04-26 12:13:31.293 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7285/api/AuthorizationEndpoints/GetRolesToEndpoint application/json 84
+2025-04-26 12:13:31.293 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:13:31.293 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.AuthorizationEndpointsController.GetRolesToEndpoint (ETicaretAPI.API)'
+2025-04-26 12:13:31.300 +03:00 [INF] Route matched with {action = "GetRolesToEndpoint", controller = "AuthorizationEndpoints"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRolesToEndpoint(ETicaretAPI.Application.Features.Queries.AuthorizationEndPoint.GetRolesToEndPoint.GetRolesToEndpointQueryRequest) on controller ETicaretAPI.API.Controllers.AuthorizationEndpointsController (ETicaretAPI.API).
+2025-04-26 12:13:31.393 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__code_0='?', @__menu_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."ActionType", t."Code", t."CreatedDate", t."Definition", t."HttpType", t."MenuId", t."UpdatedDate", t."Id0", t0."EndpointsId", t0."RolesId", t0."Id", t0."ConcurrencyStamp", t0."Name", t0."NormalizedName", t."CreatedDate0", t."Name", t."UpdatedDate0"
+FROM (
+    SELECT e."Id", e."ActionType", e."Code", e."CreatedDate", e."Definition", e."HttpType", e."MenuId", e."UpdatedDate", m."Id" AS "Id0", m."CreatedDate" AS "CreatedDate0", m."Name", m."UpdatedDate" AS "UpdatedDate0"
+    FROM "Endpoints" AS e
+    INNER JOIN "Menus" AS m ON e."MenuId" = m."Id"
+    WHERE e."Code" = @__code_0 AND m."Name" = @__menu_1
+    LIMIT 1
+) AS t
+LEFT JOIN (
+    SELECT a."EndpointsId", a."RolesId", a0."Id", a0."ConcurrencyStamp", a0."Name", a0."NormalizedName"
+    FROM "AppRoleEndpoint" AS a
+    INNER JOIN "AspNetRoles" AS a0 ON a."RolesId" = a0."Id"
+) AS t0 ON t."Id" = t0."EndpointsId"
+ORDER BY t."Id", t."Id0", t0."EndpointsId", t0."RolesId"
+2025-04-26 12:13:31.394 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Queries.AuthorizationEndPoint.GetRolesToEndPoint.GetRolesToEndpointQueryResponse'.
+2025-04-26 12:13:31.394 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.AuthorizationEndpointsController.GetRolesToEndpoint (ETicaretAPI.API) in 94.0969ms
+2025-04-26 12:13:31.394 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.AuthorizationEndpointsController.GetRolesToEndpoint (ETicaretAPI.API)'
+2025-04-26 12:13:31.394 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7285/api/AuthorizationEndpoints/GetRolesToEndpoint application/json 84 - 200 - application/json;+charset=utf-8 101.4838ms
+2025-04-26 12:13:31.397 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=-1&size=-1 - -
+2025-04-26 12:13:31.397 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:13:31.397 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=-1&size=-1 - - - 204 - - 0.1192ms
+2025-04-26 12:13:31.398 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7285/api/roles?page=-1&size=-1 - -
+2025-04-26 12:13:31.398 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:13:31.399 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 12:13:31.399 +03:00 [INF] Route matched with {action = "GetRoles", controller = "Roles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRoles(ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryRequest) on controller ETicaretAPI.API.Controllers.RolesController (ETicaretAPI.API).
+2025-04-26 12:13:31.404 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "AspNetRoles" AS a
+2025-04-26 12:13:31.404 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryResponse'.
+2025-04-26 12:13:31.430 +03:00 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."Name"
+FROM "AspNetRoles" AS a
+2025-04-26 12:13:31.431 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API) in 32.1056ms
+2025-04-26 12:13:31.431 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 12:13:31.431 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/api/roles?page=-1&size=-1 - - - 200 - application/json;+charset=utf-8 33.1640ms
+2025-04-26 12:13:43.333 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=0&size=5 - -
+2025-04-26 12:13:43.333 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:13:43.333 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=0&size=5 - - - 204 - - 0.5064ms
+2025-04-26 12:13:43.334 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7285/api/roles?page=0&size=5 - -
+2025-04-26 12:13:43.334 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:13:43.335 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 12:13:43.335 +03:00 [INF] Route matched with {action = "GetRoles", controller = "Roles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRoles(ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryRequest) on controller ETicaretAPI.API.Controllers.RolesController (ETicaretAPI.API).
+2025-04-26 12:13:43.349 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "AspNetRoles" AS a
+2025-04-26 12:13:43.349 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryResponse'.
+2025-04-26 12:13:43.352 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."Name"
+FROM "AspNetRoles" AS a
+LIMIT @__p_1 OFFSET @__p_0
+2025-04-26 12:13:43.405 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API) in 69.7346ms
+2025-04-26 12:13:43.405 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 12:13:43.405 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/api/roles?page=0&size=5 - - - 200 - application/json;+charset=utf-8 71.1350ms
+2025-04-26 12:13:44.932 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=1&size=5 - -
+2025-04-26 12:13:44.932 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:13:44.933 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=1&size=5 - - - 204 - - 0.7695ms
+2025-04-26 12:13:44.934 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7285/api/roles?page=1&size=5 - -
+2025-04-26 12:13:44.934 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:13:44.936 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 12:13:44.937 +03:00 [INF] Route matched with {action = "GetRoles", controller = "Roles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRoles(ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryRequest) on controller ETicaretAPI.API.Controllers.RolesController (ETicaretAPI.API).
+2025-04-26 12:13:44.944 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "AspNetRoles" AS a
+2025-04-26 12:13:44.944 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryResponse'.
+2025-04-26 12:13:44.947 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2025-04-26 12:13:44.947 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2025-04-26 12:13:44.974 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."Name"
+FROM "AspNetRoles" AS a
+LIMIT @__p_0 OFFSET @__p_0
+2025-04-26 12:13:45.049 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API) in 112.1289ms
+2025-04-26 12:13:45.049 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 12:13:45.050 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/api/roles?page=1&size=5 - - - 200 - application/json;+charset=utf-8 115.2476ms
+2025-04-26 12:13:45.828 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=2&size=5 - -
+2025-04-26 12:13:45.828 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:13:45.828 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=2&size=5 - - - 204 - - 0.7772ms
+2025-04-26 12:13:45.830 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7285/api/roles?page=2&size=5 - -
+2025-04-26 12:13:45.830 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:13:45.831 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 12:13:45.831 +03:00 [INF] Route matched with {action = "GetRoles", controller = "Roles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRoles(ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryRequest) on controller ETicaretAPI.API.Controllers.RolesController (ETicaretAPI.API).
+2025-04-26 12:13:45.837 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "AspNetRoles" AS a
+2025-04-26 12:13:45.837 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryResponse'.
+2025-04-26 12:13:45.843 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."Name"
+FROM "AspNetRoles" AS a
+LIMIT @__p_1 OFFSET @__p_0
+2025-04-26 12:13:45.941 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API) in 109.6224ms
+2025-04-26 12:13:45.941 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 12:13:45.942 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/api/roles?page=2&size=5 - - - 200 - application/json;+charset=utf-8 112.1960ms
+2025-04-26 12:13:47.679 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/ApplicationServices - -
+2025-04-26 12:13:47.679 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:13:47.679 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/ApplicationServices - - - 204 - - 0.6200ms
+2025-04-26 12:13:47.680 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7285/api/ApplicationServices - -
+2025-04-26 12:13:47.680 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:13:47.681 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.ApplicationServicesController.GetAuthorizeDefinitionEndpoints (ETicaretAPI.API)'
+2025-04-26 12:13:47.681 +03:00 [INF] Route matched with {action = "GetAuthorizeDefinitionEndpoints", controller = "ApplicationServices"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAuthorizeDefinitionEndpoints() on controller ETicaretAPI.API.Controllers.ApplicationServicesController (ETicaretAPI.API).
+2025-04-26 12:13:47.683 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ETicaretAPI.Application.DTOs.Configuration.Menu, ETicaretAPI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-26 12:13:47.683 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.ApplicationServicesController.GetAuthorizeDefinitionEndpoints (ETicaretAPI.API) in 1.9999ms
+2025-04-26 12:13:47.683 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.ApplicationServicesController.GetAuthorizeDefinitionEndpoints (ETicaretAPI.API)'
+2025-04-26 12:13:47.683 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/api/ApplicationServices - - - 200 - application/json;+charset=utf-8 3.2780ms
+2025-04-26 12:13:50.990 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/AuthorizationEndpoints/GetRolesToEndpoint - -
+2025-04-26 12:13:50.990 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:13:50.991 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/AuthorizationEndpoints/GetRolesToEndpoint - - - 204 - - 0.7586ms
+2025-04-26 12:13:50.992 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7285/api/AuthorizationEndpoints/GetRolesToEndpoint application/json 60
+2025-04-26 12:13:50.992 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:13:50.992 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.AuthorizationEndpointsController.GetRolesToEndpoint (ETicaretAPI.API)'
+2025-04-26 12:13:50.992 +03:00 [INF] Route matched with {action = "GetRolesToEndpoint", controller = "AuthorizationEndpoints"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRolesToEndpoint(ETicaretAPI.Application.Features.Queries.AuthorizationEndPoint.GetRolesToEndPoint.GetRolesToEndpointQueryRequest) on controller ETicaretAPI.API.Controllers.AuthorizationEndpointsController (ETicaretAPI.API).
+2025-04-26 12:13:51.026 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__code_0='?', @__menu_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."ActionType", t."Code", t."CreatedDate", t."Definition", t."HttpType", t."MenuId", t."UpdatedDate", t."Id0", t0."EndpointsId", t0."RolesId", t0."Id", t0."ConcurrencyStamp", t0."Name", t0."NormalizedName", t."CreatedDate0", t."Name", t."UpdatedDate0"
+FROM (
+    SELECT e."Id", e."ActionType", e."Code", e."CreatedDate", e."Definition", e."HttpType", e."MenuId", e."UpdatedDate", m."Id" AS "Id0", m."CreatedDate" AS "CreatedDate0", m."Name", m."UpdatedDate" AS "UpdatedDate0"
+    FROM "Endpoints" AS e
+    INNER JOIN "Menus" AS m ON e."MenuId" = m."Id"
+    WHERE e."Code" = @__code_0 AND m."Name" = @__menu_1
+    LIMIT 1
+) AS t
+LEFT JOIN (
+    SELECT a."EndpointsId", a."RolesId", a0."Id", a0."ConcurrencyStamp", a0."Name", a0."NormalizedName"
+    FROM "AppRoleEndpoint" AS a
+    INNER JOIN "AspNetRoles" AS a0 ON a."RolesId" = a0."Id"
+) AS t0 ON t."Id" = t0."EndpointsId"
+ORDER BY t."Id", t."Id0", t0."EndpointsId", t0."RolesId"
+2025-04-26 12:13:51.101 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Queries.AuthorizationEndPoint.GetRolesToEndPoint.GetRolesToEndpointQueryResponse'.
+2025-04-26 12:13:51.148 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.AuthorizationEndpointsController.GetRolesToEndpoint (ETicaretAPI.API) in 155.8949ms
+2025-04-26 12:13:51.148 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.AuthorizationEndpointsController.GetRolesToEndpoint (ETicaretAPI.API)'
+2025-04-26 12:13:51.149 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7285/api/AuthorizationEndpoints/GetRolesToEndpoint application/json 60 - 200 - application/json;+charset=utf-8 156.8855ms
+2025-04-26 12:13:51.151 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=-1&size=-1 - -
+2025-04-26 12:13:51.152 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:13:51.152 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=-1&size=-1 - - - 204 - - 0.4275ms
+2025-04-26 12:13:51.153 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7285/api/roles?page=-1&size=-1 - -
+2025-04-26 12:13:51.153 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:13:51.154 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 12:13:51.154 +03:00 [INF] Route matched with {action = "GetRoles", controller = "Roles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRoles(ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryRequest) on controller ETicaretAPI.API.Controllers.RolesController (ETicaretAPI.API).
+2025-04-26 12:13:51.157 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "AspNetRoles" AS a
+2025-04-26 12:13:51.158 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryResponse'.
+2025-04-26 12:13:51.159 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."Name"
+FROM "AspNetRoles" AS a
+2025-04-26 12:13:51.161 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API) in 6.1522ms
+2025-04-26 12:13:51.161 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 12:13:51.162 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/api/roles?page=-1&size=-1 - - - 200 - application/json;+charset=utf-8 8.5086ms
+2025-04-26 12:53:16.074 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/auth/login - -
+2025-04-26 12:53:16.077 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:53:16.077 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/auth/login - - - 204 - - 3.5017ms
+2025-04-26 12:53:16.079 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7285/api/auth/login application/json 43
+2025-04-26 12:53:16.079 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:53:16.082 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.AuthController.Login (ETicaretAPI.API)'
+2025-04-26 12:53:16.083 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ETicaretAPI.Application.Features.Queries.AppUser.LoginUser.LoginUserQueryRequest) on controller ETicaretAPI.API.Controllers.AuthController (ETicaretAPI.API).
+2025-04-26 12:53:16.167 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NameSurname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-04-26 12:53:16.259 +03:00 [INF] Executed DbCommand (26ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NameSurname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-04-26 12:53:16.263 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NameSurname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2025-04-26 12:53:16.268 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@p17='?', @p0='?' (DbType = Int32), @p1='?', @p18='?', @p2='?', @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTime), @p6='?', @p7='?', @p8='?', @p9='?', @p10='?', @p11='?' (DbType = Boolean), @p12='?', @p13='?' (DbType = DateTime), @p14='?', @p15='?' (DbType = Boolean), @p16='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "AccessFailedCount" = @p0, "ConcurrencyStamp" = @p1, "Email" = @p2, "EmailConfirmed" = @p3, "LockoutEnabled" = @p4, "LockoutEnd" = @p5, "NameSurname" = @p6, "NormalizedEmail" = @p7, "NormalizedUserName" = @p8, "PasswordHash" = @p9, "PhoneNumber" = @p10, "PhoneNumberConfirmed" = @p11, "RefreshToken" = @p12, "RefreshTokenEndDate" = @p13, "SecurityStamp" = @p14, "TwoFactorEnabled" = @p15, "UserName" = @p16
+WHERE "Id" = @p17 AND "ConcurrencyStamp" = @p18;
+2025-04-26 12:53:16.269 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Queries.AppUser.LoginUser.LoginUserSuccessCommandResponse'.
+2025-04-26 12:53:16.270 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.AuthController.Login (ETicaretAPI.API) in 186.1941ms
+2025-04-26 12:53:16.270 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.AuthController.Login (ETicaretAPI.API)'
+2025-04-26 12:53:16.270 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7285/api/auth/login application/json 43 - 200 - application/json;+charset=utf-8 190.7830ms
+2025-04-26 12:53:19.407 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=0&size=5 - -
+2025-04-26 12:53:19.408 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:53:19.408 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=0&size=5 - - - 204 - - 0.5458ms
+2025-04-26 12:53:19.408 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7285/api/roles?page=0&size=5 - -
+2025-04-26 12:53:19.409 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:53:19.410 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 12:53:19.410 +03:00 [INF] Route matched with {action = "GetRoles", controller = "Roles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRoles(ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryRequest) on controller ETicaretAPI.API.Controllers.RolesController (ETicaretAPI.API).
+2025-04-26 12:53:19.416 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "AspNetRoles" AS a
+2025-04-26 12:53:19.416 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryResponse'.
+2025-04-26 12:53:19.465 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."Name"
+FROM "AspNetRoles" AS a
+LIMIT @__p_1 OFFSET @__p_0
+2025-04-26 12:53:19.570 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API) in 159.8859ms
+2025-04-26 12:53:19.570 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 12:53:19.573 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/api/roles?page=0&size=5 - - - 200 - application/json;+charset=utf-8 164.6216ms
+2025-04-26 12:53:20.078 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/ApplicationServices - -
+2025-04-26 12:53:20.079 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:53:20.079 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/ApplicationServices - - - 204 - - 0.6291ms
+2025-04-26 12:53:20.080 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7285/api/ApplicationServices - -
+2025-04-26 12:53:20.080 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:53:20.081 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.ApplicationServicesController.GetAuthorizeDefinitionEndpoints (ETicaretAPI.API)'
+2025-04-26 12:53:20.081 +03:00 [INF] Route matched with {action = "GetAuthorizeDefinitionEndpoints", controller = "ApplicationServices"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAuthorizeDefinitionEndpoints() on controller ETicaretAPI.API.Controllers.ApplicationServicesController (ETicaretAPI.API).
+2025-04-26 12:53:20.086 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ETicaretAPI.Application.DTOs.Configuration.Menu, ETicaretAPI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-26 12:53:20.086 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.ApplicationServicesController.GetAuthorizeDefinitionEndpoints (ETicaretAPI.API) in 4.8554ms
+2025-04-26 12:53:20.086 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.ApplicationServicesController.GetAuthorizeDefinitionEndpoints (ETicaretAPI.API)'
+2025-04-26 12:53:20.086 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/api/ApplicationServices - - - 200 - application/json;+charset=utf-8 6.1874ms
+2025-04-26 12:53:23.570 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/AuthorizationEndpoints/GetRolesToEndpoint - -
+2025-04-26 12:53:23.571 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:53:23.571 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/AuthorizationEndpoints/GetRolesToEndpoint - - - 204 - - 1.1481ms
+2025-04-26 12:53:23.572 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7285/api/AuthorizationEndpoints/GetRolesToEndpoint application/json 84
+2025-04-26 12:53:23.572 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:53:23.573 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.AuthorizationEndpointsController.GetRolesToEndpoint (ETicaretAPI.API)'
+2025-04-26 12:53:23.573 +03:00 [INF] Route matched with {action = "GetRolesToEndpoint", controller = "AuthorizationEndpoints"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRolesToEndpoint(ETicaretAPI.Application.Features.Queries.AuthorizationEndPoint.GetRolesToEndPoint.GetRolesToEndpointQueryRequest) on controller ETicaretAPI.API.Controllers.AuthorizationEndpointsController (ETicaretAPI.API).
+2025-04-26 12:53:23.689 +03:00 [INF] Executed DbCommand (53ms) [Parameters=[@__code_0='?', @__menu_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."ActionType", t."Code", t."CreatedDate", t."Definition", t."HttpType", t."MenuId", t."UpdatedDate", t."Id0", t0."EndpointsId", t0."RolesId", t0."Id", t0."ConcurrencyStamp", t0."Name", t0."NormalizedName", t."CreatedDate0", t."Name", t."UpdatedDate0"
+FROM (
+    SELECT e."Id", e."ActionType", e."Code", e."CreatedDate", e."Definition", e."HttpType", e."MenuId", e."UpdatedDate", m."Id" AS "Id0", m."CreatedDate" AS "CreatedDate0", m."Name", m."UpdatedDate" AS "UpdatedDate0"
+    FROM "Endpoints" AS e
+    INNER JOIN "Menus" AS m ON e."MenuId" = m."Id"
+    WHERE e."Code" = @__code_0 AND m."Name" = @__menu_1
+    LIMIT 1
+) AS t
+LEFT JOIN (
+    SELECT a."EndpointsId", a."RolesId", a0."Id", a0."ConcurrencyStamp", a0."Name", a0."NormalizedName"
+    FROM "AppRoleEndpoint" AS a
+    INNER JOIN "AspNetRoles" AS a0 ON a."RolesId" = a0."Id"
+) AS t0 ON t."Id" = t0."EndpointsId"
+ORDER BY t."Id", t."Id0", t0."EndpointsId", t0."RolesId"
+2025-04-26 12:53:23.769 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Queries.AuthorizationEndPoint.GetRolesToEndPoint.GetRolesToEndpointQueryResponse'.
+2025-04-26 12:53:23.770 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.AuthorizationEndpointsController.GetRolesToEndpoint (ETicaretAPI.API) in 197.4981ms
+2025-04-26 12:53:23.771 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.AuthorizationEndpointsController.GetRolesToEndpoint (ETicaretAPI.API)'
+2025-04-26 12:53:23.771 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7285/api/AuthorizationEndpoints/GetRolesToEndpoint application/json 84 - 200 - application/json;+charset=utf-8 199.0527ms
+2025-04-26 12:53:23.775 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=-1&size=-1 - -
+2025-04-26 12:53:23.775 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:53:23.775 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=-1&size=-1 - - - 204 - - 0.7725ms
+2025-04-26 12:53:23.777 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7285/api/roles?page=-1&size=-1 - -
+2025-04-26 12:53:23.777 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:53:23.778 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 12:53:23.778 +03:00 [INF] Route matched with {action = "GetRoles", controller = "Roles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRoles(ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryRequest) on controller ETicaretAPI.API.Controllers.RolesController (ETicaretAPI.API).
+2025-04-26 12:53:23.783 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "AspNetRoles" AS a
+2025-04-26 12:53:23.784 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryResponse'.
+2025-04-26 12:53:23.812 +03:00 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."Name"
+FROM "AspNetRoles" AS a
+2025-04-26 12:53:23.864 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API) in 85.048ms
+2025-04-26 12:53:23.864 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 12:53:23.865 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/api/roles?page=-1&size=-1 - - - 200 - application/json;+charset=utf-8 87.5739ms
+2025-04-26 12:53:27.988 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/AuthorizationEndpoints - -
+2025-04-26 12:53:27.989 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:53:27.989 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/AuthorizationEndpoints - - - 204 - - 1.7042ms
+2025-04-26 12:53:27.991 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7285/api/AuthorizationEndpoints application/json 121
+2025-04-26 12:53:27.991 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:53:27.991 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.AuthorizationEndpointsController.AssignRoleEndpoint (ETicaretAPI.API)'
+2025-04-26 12:53:27.999 +03:00 [INF] Route matched with {action = "AssignRoleEndpoint", controller = "AuthorizationEndpoints"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AssignRoleEndpoint(ETicaretAPI.Application.Features.Commands.AuthorizationEndPoint.AssignRoleEndPoint.AssignRoleEndpointCommandRequest) on controller ETicaretAPI.API.Controllers.AuthorizationEndpointsController (ETicaretAPI.API).
+2025-04-26 12:53:28.057 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__menu_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT m."Id", m."CreatedDate", m."Name", m."UpdatedDate"
+FROM "Menus" AS m
+WHERE m."Name" = @__menu_0
+LIMIT 1
+2025-04-26 12:53:28.176 +03:00 [INF] Executed DbCommand (52ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?', @p3='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Menus" ("Id", "CreatedDate", "Name", "UpdatedDate")
+VALUES (@p0, @p1, @p2, @p3);
+2025-04-26 12:53:28.192 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__code_0='?', @__menu_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."ActionType", t."Code", t."CreatedDate", t."Definition", t."HttpType", t."MenuId", t."UpdatedDate", t."Id0", t."CreatedDate0", t."Name", t."UpdatedDate0", t0."EndpointsId", t0."RolesId", t0."Id", t0."ConcurrencyStamp", t0."Name", t0."NormalizedName"
+FROM (
+    SELECT e."Id", e."ActionType", e."Code", e."CreatedDate", e."Definition", e."HttpType", e."MenuId", e."UpdatedDate", m."Id" AS "Id0", m."CreatedDate" AS "CreatedDate0", m."Name", m."UpdatedDate" AS "UpdatedDate0"
+    FROM "Endpoints" AS e
+    INNER JOIN "Menus" AS m ON e."MenuId" = m."Id"
+    WHERE e."Code" = @__code_0 AND m."Name" = @__menu_1
+    LIMIT 1
+) AS t
+LEFT JOIN (
+    SELECT a."EndpointsId", a."RolesId", a0."Id", a0."ConcurrencyStamp", a0."Name", a0."NormalizedName"
+    FROM "AppRoleEndpoint" AS a
+    INNER JOIN "AspNetRoles" AS a0 ON a."RolesId" = a0."Id"
+) AS t0 ON t."Id" = t0."EndpointsId"
+ORDER BY t."Id", t."Id0", t0."EndpointsId", t0."RolesId"
+2025-04-26 12:53:28.221 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?', @p3='?' (DbType = DateTime), @p4='?', @p5='?', @p6='?' (DbType = Guid), @p7='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Endpoints" ("Id", "ActionType", "Code", "CreatedDate", "Definition", "HttpType", "MenuId", "UpdatedDate")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2025-04-26 12:53:28.236 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__roles_0='?' (DbType = Object)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."Name" = ANY (@__roles_0) OR ((a."Name" IS NULL) AND (array_position(@__roles_0, NULL) IS NOT NULL))
+2025-04-26 12:53:28.261 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?' (DbType = Guid), @p3='?', @p4='?' (DbType = Guid), @p5='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AppRoleEndpoint" ("EndpointsId", "RolesId")
+VALUES (@p0, @p1);
+INSERT INTO "AppRoleEndpoint" ("EndpointsId", "RolesId")
+VALUES (@p2, @p3);
+INSERT INTO "AppRoleEndpoint" ("EndpointsId", "RolesId")
+VALUES (@p4, @p5);
+2025-04-26 12:53:28.266 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Commands.AuthorizationEndPoint.AssignRoleEndPoint.AssignRoleEndpointCommandResponse'.
+2025-04-26 12:53:28.266 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.AuthorizationEndpointsController.AssignRoleEndpoint (ETicaretAPI.API) in 266.5738ms
+2025-04-26 12:53:28.266 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.AuthorizationEndpointsController.AssignRoleEndpoint (ETicaretAPI.API)'
+2025-04-26 12:53:28.266 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7285/api/AuthorizationEndpoints application/json 121 - 200 - application/json;+charset=utf-8 275.6460ms
+2025-04-26 12:53:29.500 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/AuthorizationEndpoints/GetRolesToEndpoint - -
+2025-04-26 12:53:29.501 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:53:29.501 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/AuthorizationEndpoints/GetRolesToEndpoint - - - 204 - - 0.6493ms
+2025-04-26 12:53:29.503 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7285/api/AuthorizationEndpoints/GetRolesToEndpoint application/json 84
+2025-04-26 12:53:29.503 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:53:29.503 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.AuthorizationEndpointsController.GetRolesToEndpoint (ETicaretAPI.API)'
+2025-04-26 12:53:29.504 +03:00 [INF] Route matched with {action = "GetRolesToEndpoint", controller = "AuthorizationEndpoints"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRolesToEndpoint(ETicaretAPI.Application.Features.Queries.AuthorizationEndPoint.GetRolesToEndPoint.GetRolesToEndpointQueryRequest) on controller ETicaretAPI.API.Controllers.AuthorizationEndpointsController (ETicaretAPI.API).
+2025-04-26 12:53:29.538 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__code_0='?', @__menu_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."ActionType", t."Code", t."CreatedDate", t."Definition", t."HttpType", t."MenuId", t."UpdatedDate", t."Id0", t0."EndpointsId", t0."RolesId", t0."Id", t0."ConcurrencyStamp", t0."Name", t0."NormalizedName", t."CreatedDate0", t."Name", t."UpdatedDate0"
+FROM (
+    SELECT e."Id", e."ActionType", e."Code", e."CreatedDate", e."Definition", e."HttpType", e."MenuId", e."UpdatedDate", m."Id" AS "Id0", m."CreatedDate" AS "CreatedDate0", m."Name", m."UpdatedDate" AS "UpdatedDate0"
+    FROM "Endpoints" AS e
+    INNER JOIN "Menus" AS m ON e."MenuId" = m."Id"
+    WHERE e."Code" = @__code_0 AND m."Name" = @__menu_1
+    LIMIT 1
+) AS t
+LEFT JOIN (
+    SELECT a."EndpointsId", a."RolesId", a0."Id", a0."ConcurrencyStamp", a0."Name", a0."NormalizedName"
+    FROM "AppRoleEndpoint" AS a
+    INNER JOIN "AspNetRoles" AS a0 ON a."RolesId" = a0."Id"
+) AS t0 ON t."Id" = t0."EndpointsId"
+ORDER BY t."Id", t."Id0", t0."EndpointsId", t0."RolesId"
+2025-04-26 12:53:29.587 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Queries.AuthorizationEndPoint.GetRolesToEndPoint.GetRolesToEndpointQueryResponse'.
+2025-04-26 12:53:29.588 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.AuthorizationEndpointsController.GetRolesToEndpoint (ETicaretAPI.API) in 84.1851ms
+2025-04-26 12:53:29.588 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.AuthorizationEndpointsController.GetRolesToEndpoint (ETicaretAPI.API)'
+2025-04-26 12:53:29.588 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7285/api/AuthorizationEndpoints/GetRolesToEndpoint application/json 84 - 200 - application/json;+charset=utf-8 85.3287ms
+2025-04-26 12:53:29.591 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=-1&size=-1 - -
+2025-04-26 12:53:29.591 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:53:29.592 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=-1&size=-1 - - - 204 - - 0.2151ms
+2025-04-26 12:53:29.592 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7285/api/roles?page=-1&size=-1 - -
+2025-04-26 12:53:29.592 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:53:29.593 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 12:53:29.593 +03:00 [INF] Route matched with {action = "GetRoles", controller = "Roles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRoles(ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryRequest) on controller ETicaretAPI.API.Controllers.RolesController (ETicaretAPI.API).
+2025-04-26 12:53:29.598 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "AspNetRoles" AS a
+2025-04-26 12:53:29.598 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryResponse'.
+2025-04-26 12:53:29.600 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."Name"
+FROM "AspNetRoles" AS a
+2025-04-26 12:53:29.675 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API) in 81.9761ms
+2025-04-26 12:53:29.675 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 12:53:29.676 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/api/roles?page=-1&size=-1 - - - 200 - application/json;+charset=utf-8 83.1425ms
+2025-04-26 12:53:34.785 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=0&size=5 - -
+2025-04-26 12:53:34.785 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:53:34.785 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=0&size=5 - - - 204 - - 0.5036ms
+2025-04-26 12:53:34.786 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7285/api/roles?page=0&size=5 - -
+2025-04-26 12:53:34.786 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:53:34.787 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 12:53:34.787 +03:00 [INF] Route matched with {action = "GetRoles", controller = "Roles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRoles(ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryRequest) on controller ETicaretAPI.API.Controllers.RolesController (ETicaretAPI.API).
+2025-04-26 12:53:34.795 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "AspNetRoles" AS a
+2025-04-26 12:53:34.795 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryResponse'.
+2025-04-26 12:53:34.869 +03:00 [INF] Executed DbCommand (49ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."Name"
+FROM "AspNetRoles" AS a
+LIMIT @__p_1 OFFSET @__p_0
+2025-04-26 12:53:34.894 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API) in 106.5839ms
+2025-04-26 12:53:34.894 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 12:53:34.895 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/api/roles?page=0&size=5 - - - 200 - application/json;+charset=utf-8 108.6882ms
+2025-04-26 12:53:36.210 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/ApplicationServices - -
+2025-04-26 12:53:36.210 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:53:36.211 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/ApplicationServices - - - 204 - - 0.5579ms
+2025-04-26 12:53:36.212 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7285/api/ApplicationServices - -
+2025-04-26 12:53:36.212 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:53:36.213 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.ApplicationServicesController.GetAuthorizeDefinitionEndpoints (ETicaretAPI.API)'
+2025-04-26 12:53:36.213 +03:00 [INF] Route matched with {action = "GetAuthorizeDefinitionEndpoints", controller = "ApplicationServices"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAuthorizeDefinitionEndpoints() on controller ETicaretAPI.API.Controllers.ApplicationServicesController (ETicaretAPI.API).
+2025-04-26 12:53:36.216 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ETicaretAPI.Application.DTOs.Configuration.Menu, ETicaretAPI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-26 12:53:36.216 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.ApplicationServicesController.GetAuthorizeDefinitionEndpoints (ETicaretAPI.API) in 3.3993ms
+2025-04-26 12:53:36.216 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.ApplicationServicesController.GetAuthorizeDefinitionEndpoints (ETicaretAPI.API)'
+2025-04-26 12:53:36.216 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/api/ApplicationServices - - - 200 - application/json;+charset=utf-8 4.7570ms
+2025-04-26 12:53:38.474 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/AuthorizationEndpoints/GetRolesToEndpoint - -
+2025-04-26 12:53:38.474 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:53:38.474 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/AuthorizationEndpoints/GetRolesToEndpoint - - - 204 - - 0.9420ms
+2025-04-26 12:53:38.476 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7285/api/AuthorizationEndpoints/GetRolesToEndpoint application/json 55
+2025-04-26 12:53:38.476 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:53:38.477 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.AuthorizationEndpointsController.GetRolesToEndpoint (ETicaretAPI.API)'
+2025-04-26 12:53:38.477 +03:00 [INF] Route matched with {action = "GetRolesToEndpoint", controller = "AuthorizationEndpoints"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRolesToEndpoint(ETicaretAPI.Application.Features.Queries.AuthorizationEndPoint.GetRolesToEndPoint.GetRolesToEndpointQueryRequest) on controller ETicaretAPI.API.Controllers.AuthorizationEndpointsController (ETicaretAPI.API).
+2025-04-26 12:53:38.513 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__code_0='?', @__menu_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."ActionType", t."Code", t."CreatedDate", t."Definition", t."HttpType", t."MenuId", t."UpdatedDate", t."Id0", t0."EndpointsId", t0."RolesId", t0."Id", t0."ConcurrencyStamp", t0."Name", t0."NormalizedName", t."CreatedDate0", t."Name", t."UpdatedDate0"
+FROM (
+    SELECT e."Id", e."ActionType", e."Code", e."CreatedDate", e."Definition", e."HttpType", e."MenuId", e."UpdatedDate", m."Id" AS "Id0", m."CreatedDate" AS "CreatedDate0", m."Name", m."UpdatedDate" AS "UpdatedDate0"
+    FROM "Endpoints" AS e
+    INNER JOIN "Menus" AS m ON e."MenuId" = m."Id"
+    WHERE e."Code" = @__code_0 AND m."Name" = @__menu_1
+    LIMIT 1
+) AS t
+LEFT JOIN (
+    SELECT a."EndpointsId", a."RolesId", a0."Id", a0."ConcurrencyStamp", a0."Name", a0."NormalizedName"
+    FROM "AppRoleEndpoint" AS a
+    INNER JOIN "AspNetRoles" AS a0 ON a."RolesId" = a0."Id"
+) AS t0 ON t."Id" = t0."EndpointsId"
+ORDER BY t."Id", t."Id0", t0."EndpointsId", t0."RolesId"
+2025-04-26 12:53:38.604 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Queries.AuthorizationEndPoint.GetRolesToEndPoint.GetRolesToEndpointQueryResponse'.
+2025-04-26 12:53:38.604 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.AuthorizationEndpointsController.GetRolesToEndpoint (ETicaretAPI.API) in 127.1809ms
+2025-04-26 12:53:38.604 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.AuthorizationEndpointsController.GetRolesToEndpoint (ETicaretAPI.API)'
+2025-04-26 12:53:38.604 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7285/api/AuthorizationEndpoints/GetRolesToEndpoint application/json 55 - 200 - application/json;+charset=utf-8 128.3529ms
+2025-04-26 12:53:38.608 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=-1&size=-1 - -
+2025-04-26 12:53:38.608 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:53:38.608 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=-1&size=-1 - - - 204 - - 0.4641ms
+2025-04-26 12:53:38.612 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7285/api/roles?page=-1&size=-1 - -
+2025-04-26 12:53:38.613 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:53:38.613 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 12:53:38.614 +03:00 [INF] Route matched with {action = "GetRoles", controller = "Roles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRoles(ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryRequest) on controller ETicaretAPI.API.Controllers.RolesController (ETicaretAPI.API).
+2025-04-26 12:53:38.620 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "AspNetRoles" AS a
+2025-04-26 12:53:38.620 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryResponse'.
+2025-04-26 12:53:38.667 +03:00 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."Name"
+FROM "AspNetRoles" AS a
+2025-04-26 12:53:38.760 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API) in 146.579ms
+2025-04-26 12:53:38.760 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 12:53:38.760 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/api/roles?page=-1&size=-1 - - - 200 - application/json;+charset=utf-8 148.0937ms
+2025-04-26 12:53:41.284 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/AuthorizationEndpoints - -
+2025-04-26 12:53:41.285 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:53:41.285 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/AuthorizationEndpoints - - - 204 - - 0.5826ms
+2025-04-26 12:53:41.286 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7285/api/AuthorizationEndpoints application/json 83
+2025-04-26 12:53:41.286 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:53:41.286 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.AuthorizationEndpointsController.AssignRoleEndpoint (ETicaretAPI.API)'
+2025-04-26 12:53:41.287 +03:00 [INF] Route matched with {action = "AssignRoleEndpoint", controller = "AuthorizationEndpoints"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AssignRoleEndpoint(ETicaretAPI.Application.Features.Commands.AuthorizationEndPoint.AssignRoleEndPoint.AssignRoleEndpointCommandRequest) on controller ETicaretAPI.API.Controllers.AuthorizationEndpointsController (ETicaretAPI.API).
+2025-04-26 12:53:41.349 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__menu_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT m."Id", m."CreatedDate", m."Name", m."UpdatedDate"
+FROM "Menus" AS m
+WHERE m."Name" = @__menu_0
+LIMIT 1
+2025-04-26 12:53:41.504 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?', @p3='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Menus" ("Id", "CreatedDate", "Name", "UpdatedDate")
+VALUES (@p0, @p1, @p2, @p3);
+2025-04-26 12:53:41.509 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__code_0='?', @__menu_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."ActionType", t."Code", t."CreatedDate", t."Definition", t."HttpType", t."MenuId", t."UpdatedDate", t."Id0", t."CreatedDate0", t."Name", t."UpdatedDate0", t0."EndpointsId", t0."RolesId", t0."Id", t0."ConcurrencyStamp", t0."Name", t0."NormalizedName"
+FROM (
+    SELECT e."Id", e."ActionType", e."Code", e."CreatedDate", e."Definition", e."HttpType", e."MenuId", e."UpdatedDate", m."Id" AS "Id0", m."CreatedDate" AS "CreatedDate0", m."Name", m."UpdatedDate" AS "UpdatedDate0"
+    FROM "Endpoints" AS e
+    INNER JOIN "Menus" AS m ON e."MenuId" = m."Id"
+    WHERE e."Code" = @__code_0 AND m."Name" = @__menu_1
+    LIMIT 1
+) AS t
+LEFT JOIN (
+    SELECT a."EndpointsId", a."RolesId", a0."Id", a0."ConcurrencyStamp", a0."Name", a0."NormalizedName"
+    FROM "AppRoleEndpoint" AS a
+    INNER JOIN "AspNetRoles" AS a0 ON a."RolesId" = a0."Id"
+) AS t0 ON t."Id" = t0."EndpointsId"
+ORDER BY t."Id", t."Id0", t0."EndpointsId", t0."RolesId"
+2025-04-26 12:53:41.516 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?', @p3='?' (DbType = DateTime), @p4='?', @p5='?', @p6='?' (DbType = Guid), @p7='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Endpoints" ("Id", "ActionType", "Code", "CreatedDate", "Definition", "HttpType", "MenuId", "UpdatedDate")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2025-04-26 12:53:41.522 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__roles_0='?' (DbType = Object)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."Name" = ANY (@__roles_0) OR ((a."Name" IS NULL) AND (array_position(@__roles_0, NULL) IS NOT NULL))
+2025-04-26 12:53:41.525 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?' (DbType = Guid), @p3='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AppRoleEndpoint" ("EndpointsId", "RolesId")
+VALUES (@p0, @p1);
+INSERT INTO "AppRoleEndpoint" ("EndpointsId", "RolesId")
+VALUES (@p2, @p3);
+2025-04-26 12:53:41.529 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Commands.AuthorizationEndPoint.AssignRoleEndPoint.AssignRoleEndpointCommandResponse'.
+2025-04-26 12:53:41.529 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.AuthorizationEndpointsController.AssignRoleEndpoint (ETicaretAPI.API) in 242.0392ms
+2025-04-26 12:53:41.529 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.AuthorizationEndpointsController.AssignRoleEndpoint (ETicaretAPI.API)'
+2025-04-26 12:53:41.529 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7285/api/AuthorizationEndpoints application/json 83 - 200 - application/json;+charset=utf-8 243.0215ms
+2025-04-26 12:53:42.724 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=0&size=5 - -
+2025-04-26 12:53:42.724 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:53:42.724 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=0&size=5 - - - 204 - - 0.3552ms
+2025-04-26 12:53:42.725 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7285/api/roles?page=0&size=5 - -
+2025-04-26 12:53:42.725 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:53:42.726 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 12:53:42.726 +03:00 [INF] Route matched with {action = "GetRoles", controller = "Roles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRoles(ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryRequest) on controller ETicaretAPI.API.Controllers.RolesController (ETicaretAPI.API).
+2025-04-26 12:53:42.732 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "AspNetRoles" AS a
+2025-04-26 12:53:42.733 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryResponse'.
+2025-04-26 12:53:42.736 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."Name"
+FROM "AspNetRoles" AS a
+LIMIT @__p_1 OFFSET @__p_0
+2025-04-26 12:53:42.786 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API) in 59.823ms
+2025-04-26 12:53:42.807 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 12:53:42.807 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/api/roles?page=0&size=5 - - - 200 - application/json;+charset=utf-8 82.4802ms
+2025-04-26 12:53:43.771 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/ApplicationServices - -
+2025-04-26 12:53:43.771 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:53:43.771 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/ApplicationServices - - - 204 - - 0.5042ms
+2025-04-26 12:53:43.772 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7285/api/ApplicationServices - -
+2025-04-26 12:53:43.772 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:53:43.772 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.ApplicationServicesController.GetAuthorizeDefinitionEndpoints (ETicaretAPI.API)'
+2025-04-26 12:53:43.772 +03:00 [INF] Route matched with {action = "GetAuthorizeDefinitionEndpoints", controller = "ApplicationServices"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAuthorizeDefinitionEndpoints() on controller ETicaretAPI.API.Controllers.ApplicationServicesController (ETicaretAPI.API).
+2025-04-26 12:53:43.775 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ETicaretAPI.Application.DTOs.Configuration.Menu, ETicaretAPI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-26 12:53:43.775 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.ApplicationServicesController.GetAuthorizeDefinitionEndpoints (ETicaretAPI.API) in 2.7675ms
+2025-04-26 12:53:43.775 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.ApplicationServicesController.GetAuthorizeDefinitionEndpoints (ETicaretAPI.API)'
+2025-04-26 12:53:43.775 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/api/ApplicationServices - - - 200 - application/json;+charset=utf-8 3.7569ms
+2025-04-26 12:53:46.071 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/AuthorizationEndpoints/GetRolesToEndpoint - -
+2025-04-26 12:53:46.071 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:53:46.072 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/AuthorizationEndpoints/GetRolesToEndpoint - - - 204 - - 0.6130ms
+2025-04-26 12:53:46.073 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7285/api/AuthorizationEndpoints/GetRolesToEndpoint application/json 55
+2025-04-26 12:53:46.073 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:53:46.073 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.AuthorizationEndpointsController.GetRolesToEndpoint (ETicaretAPI.API)'
+2025-04-26 12:53:46.074 +03:00 [INF] Route matched with {action = "GetRolesToEndpoint", controller = "AuthorizationEndpoints"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRolesToEndpoint(ETicaretAPI.Application.Features.Queries.AuthorizationEndPoint.GetRolesToEndPoint.GetRolesToEndpointQueryRequest) on controller ETicaretAPI.API.Controllers.AuthorizationEndpointsController (ETicaretAPI.API).
+2025-04-26 12:53:46.133 +03:00 [INF] Executed DbCommand (30ms) [Parameters=[@__code_0='?', @__menu_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."ActionType", t."Code", t."CreatedDate", t."Definition", t."HttpType", t."MenuId", t."UpdatedDate", t."Id0", t0."EndpointsId", t0."RolesId", t0."Id", t0."ConcurrencyStamp", t0."Name", t0."NormalizedName", t."CreatedDate0", t."Name", t."UpdatedDate0"
+FROM (
+    SELECT e."Id", e."ActionType", e."Code", e."CreatedDate", e."Definition", e."HttpType", e."MenuId", e."UpdatedDate", m."Id" AS "Id0", m."CreatedDate" AS "CreatedDate0", m."Name", m."UpdatedDate" AS "UpdatedDate0"
+    FROM "Endpoints" AS e
+    INNER JOIN "Menus" AS m ON e."MenuId" = m."Id"
+    WHERE e."Code" = @__code_0 AND m."Name" = @__menu_1
+    LIMIT 1
+) AS t
+LEFT JOIN (
+    SELECT a."EndpointsId", a."RolesId", a0."Id", a0."ConcurrencyStamp", a0."Name", a0."NormalizedName"
+    FROM "AppRoleEndpoint" AS a
+    INNER JOIN "AspNetRoles" AS a0 ON a."RolesId" = a0."Id"
+) AS t0 ON t."Id" = t0."EndpointsId"
+ORDER BY t."Id", t."Id0", t0."EndpointsId", t0."RolesId"
+2025-04-26 12:53:46.280 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Queries.AuthorizationEndPoint.GetRolesToEndPoint.GetRolesToEndpointQueryResponse'.
+2025-04-26 12:53:46.332 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.AuthorizationEndpointsController.GetRolesToEndpoint (ETicaretAPI.API) in 258.5592ms
+2025-04-26 12:53:46.333 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.AuthorizationEndpointsController.GetRolesToEndpoint (ETicaretAPI.API)'
+2025-04-26 12:53:46.392 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7285/api/AuthorizationEndpoints/GetRolesToEndpoint application/json 55 - 200 - application/json;+charset=utf-8 318.7594ms
+2025-04-26 12:53:46.396 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=-1&size=-1 - -
+2025-04-26 12:53:46.396 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:53:46.396 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=-1&size=-1 - - - 204 - - 0.3752ms
+2025-04-26 12:53:46.398 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7285/api/roles?page=-1&size=-1 - -
+2025-04-26 12:53:46.398 +03:00 [INF] CORS policy execution successful.
+2025-04-26 12:53:46.399 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 12:53:46.399 +03:00 [INF] Route matched with {action = "GetRoles", controller = "Roles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRoles(ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryRequest) on controller ETicaretAPI.API.Controllers.RolesController (ETicaretAPI.API).
+2025-04-26 12:53:46.406 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "AspNetRoles" AS a
+2025-04-26 12:53:46.406 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryResponse'.
+2025-04-26 12:53:46.451 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."Name"
+FROM "AspNetRoles" AS a
+2025-04-26 12:53:46.577 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API) in 178.4882ms
+2025-04-26 12:53:46.578 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 12:53:46.578 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/api/roles?page=-1&size=-1 - - - 200 - application/json;+charset=utf-8 180.3581ms
+2025-04-26 14:11:25.879 +03:00 [INF] User profile is available. Using '/Users/taft/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-04-26 14:11:26.260 +03:00 [INF] Now listening on: https://localhost:7285
+2025-04-26 14:11:26.261 +03:00 [INF] Now listening on: http://localhost:5026
+2025-04-26 14:11:26.262 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-26 14:11:26.263 +03:00 [INF] Hosting environment: Development
+2025-04-26 14:11:26.263 +03:00 [INF] Content root path: /Users/taft/Desktop/ETicaretUygulamasi/ETicaretAPI/Presentation/ETicaretAPI.API
+2025-04-26 14:11:27.553 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7285/swagger/index.html - -
+2025-04-26 14:11:27.608 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/swagger/index.html - - - 200 - text/html;charset=utf-8 55.1370ms
+2025-04-26 14:11:27.654 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7285/swagger/v1/swagger.json - -
+2025-04-26 14:11:27.729 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 74.5860ms
+2025-04-26 14:11:46.993 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/auth/login - -
+2025-04-26 14:11:47.048 +03:00 [INF] CORS policy execution successful.
+2025-04-26 14:11:47.053 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/auth/login - - - 204 - - 61.1437ms
+2025-04-26 14:11:47.057 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7285/api/auth/login application/json 43
+2025-04-26 14:11:47.062 +03:00 [INF] CORS policy execution successful.
+2025-04-26 14:11:47.083 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.AuthController.Login (ETicaretAPI.API)'
+2025-04-26 14:11:47.105 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ETicaretAPI.Application.Features.Queries.AppUser.LoginUser.LoginUserQueryRequest) on controller ETicaretAPI.API.Controllers.AuthController (ETicaretAPI.API).
+2025-04-26 14:11:47.727 +03:00 [INF] Executed DbCommand (25ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NameSurname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-04-26 14:11:47.906 +03:00 [INF] Executed DbCommand (24ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NameSurname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-04-26 14:11:47.914 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NameSurname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2025-04-26 14:11:47.952 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@p17='?', @p0='?' (DbType = Int32), @p1='?', @p18='?', @p2='?', @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTime), @p6='?', @p7='?', @p8='?', @p9='?', @p10='?', @p11='?' (DbType = Boolean), @p12='?', @p13='?' (DbType = DateTime), @p14='?', @p15='?' (DbType = Boolean), @p16='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "AccessFailedCount" = @p0, "ConcurrencyStamp" = @p1, "Email" = @p2, "EmailConfirmed" = @p3, "LockoutEnabled" = @p4, "LockoutEnd" = @p5, "NameSurname" = @p6, "NormalizedEmail" = @p7, "NormalizedUserName" = @p8, "PasswordHash" = @p9, "PhoneNumber" = @p10, "PhoneNumberConfirmed" = @p11, "RefreshToken" = @p12, "RefreshTokenEndDate" = @p13, "SecurityStamp" = @p14, "TwoFactorEnabled" = @p15, "UserName" = @p16
+WHERE "Id" = @p17 AND "ConcurrencyStamp" = @p18;
+2025-04-26 14:11:47.959 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Queries.AppUser.LoginUser.LoginUserSuccessCommandResponse'.
+2025-04-26 14:11:47.964 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.AuthController.Login (ETicaretAPI.API) in 857.3885ms
+2025-04-26 14:11:47.964 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.AuthController.Login (ETicaretAPI.API)'
+2025-04-26 14:11:47.967 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7285/api/auth/login application/json 43 - 200 - application/json;+charset=utf-8 910.8018ms
+2025-04-26 14:11:49.980 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/users?page=0&size=5 - -
+2025-04-26 14:11:49.982 +03:00 [INF] CORS policy execution successful.
+2025-04-26 14:11:49.982 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/users?page=0&size=5 - - - 204 - - 2.6206ms
+2025-04-26 14:11:49.983 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7285/api/users?page=0&size=5 - -
+2025-04-26 14:11:49.984 +03:00 [INF] CORS policy execution successful.
+2025-04-26 14:11:50.056 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.UsersController.GetAllUsers (ETicaretAPI.API)'
+2025-04-26 14:11:50.059 +03:00 [INF] Route matched with {action = "GetAllUsers", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUsers(ETicaretAPI.Application.Features.Queries.AppUser.GetAllUsers.GetAllUsersQueryRequest) on controller ETicaretAPI.API.Controllers.UsersController (ETicaretAPI.API).
+2025-04-26 14:11:50.096 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2025-04-26 14:11:50.096 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2025-04-26 14:11:50.102 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NameSurname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+LIMIT @__p_1 OFFSET @__p_0
+2025-04-26 14:11:50.150 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "AspNetUsers" AS a
+2025-04-26 14:11:50.151 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Queries.AppUser.GetAllUsers.GetAllUsersQueryResponse'.
+2025-04-26 14:11:50.152 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.UsersController.GetAllUsers (ETicaretAPI.API) in 92.9999ms
+2025-04-26 14:11:50.152 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.UsersController.GetAllUsers (ETicaretAPI.API)'
+2025-04-26 14:11:50.152 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/api/users?page=0&size=5 - - - 200 - application/json;+charset=utf-8 168.4797ms
+2025-04-26 14:11:52.942 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/users/get-roles-to-user/1e43ac2e-ff45-4f2f-bc14-f38ee387569b - -
+2025-04-26 14:11:52.944 +03:00 [INF] CORS policy execution successful.
+2025-04-26 14:11:52.944 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/users/get-roles-to-user/1e43ac2e-ff45-4f2f-bc14-f38ee387569b - - - 204 - - 1.7608ms
+2025-04-26 14:11:52.945 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7285/api/users/get-roles-to-user/1e43ac2e-ff45-4f2f-bc14-f38ee387569b - -
+2025-04-26 14:11:52.948 +03:00 [INF] CORS policy execution successful.
+2025-04-26 14:11:52.952 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.UsersController.GetRolesToUser (ETicaretAPI.API)'
+2025-04-26 14:11:52.957 +03:00 [INF] Route matched with {action = "GetRolesToUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRolesToUser(ETicaretAPI.Application.Features.Queries.AppUser.GetRolesToUser.GetRolesToUserQueryRequest) on controller ETicaretAPI.API.Controllers.UsersController (ETicaretAPI.API).
+2025-04-26 14:11:52.993 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NameSurname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."Id" = @__p_0
+LIMIT 1
+2025-04-26 14:11:53.033 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a0."Name"
+FROM "AspNetUserRoles" AS a
+INNER JOIN "AspNetRoles" AS a0 ON a."RoleId" = a0."Id"
+WHERE a."UserId" = @__userId_0
+2025-04-26 14:11:53.034 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Queries.AppUser.GetRolesToUser.GetRolesToUserQueryResponse'.
+2025-04-26 14:11:53.034 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.UsersController.GetRolesToUser (ETicaretAPI.API) in 77.0216ms
+2025-04-26 14:11:53.034 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.UsersController.GetRolesToUser (ETicaretAPI.API)'
+2025-04-26 14:11:53.034 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/api/users/get-roles-to-user/1e43ac2e-ff45-4f2f-bc14-f38ee387569b - - - 200 - application/json;+charset=utf-8 89.0205ms
+2025-04-26 14:11:53.036 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=-1&size=-1 - -
+2025-04-26 14:11:53.036 +03:00 [INF] CORS policy execution successful.
+2025-04-26 14:11:53.036 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=-1&size=-1 - - - 204 - - 0.1249ms
+2025-04-26 14:11:53.036 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7285/api/roles?page=-1&size=-1 - -
+2025-04-26 14:11:53.036 +03:00 [INF] CORS policy execution successful.
+2025-04-26 14:11:53.037 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 14:11:53.038 +03:00 [INF] Route matched with {action = "GetRoles", controller = "Roles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRoles(ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryRequest) on controller ETicaretAPI.API.Controllers.RolesController (ETicaretAPI.API).
+2025-04-26 14:11:53.045 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "AspNetRoles" AS a
+2025-04-26 14:11:53.046 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryResponse'.
+2025-04-26 14:11:53.049 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."Name"
+FROM "AspNetRoles" AS a
+2025-04-26 14:11:53.051 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API) in 13.0078ms
+2025-04-26 14:11:53.051 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 14:11:53.051 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/api/roles?page=-1&size=-1 - - - 200 - application/json;+charset=utf-8 15.1691ms
+2025-04-26 14:11:56.626 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/users/assign-role-to-user - -
+2025-04-26 14:11:56.626 +03:00 [INF] CORS policy execution successful.
+2025-04-26 14:11:56.627 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/users/assign-role-to-user - - - 204 - - 1.1537ms
+2025-04-26 14:11:56.628 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7285/api/users/assign-role-to-user application/json 77
+2025-04-26 14:11:56.629 +03:00 [INF] CORS policy execution successful.
+2025-04-26 14:11:56.630 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.UsersController.AssignRoleToUser (ETicaretAPI.API)'
+2025-04-26 14:11:56.634 +03:00 [INF] Route matched with {action = "AssignRoleToUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AssignRoleToUser(ETicaretAPI.Application.Features.Commands.AppUser.AssignRoleToUser.AssignRoleToUserCommandRequest) on controller ETicaretAPI.API.Controllers.UsersController (ETicaretAPI.API).
+2025-04-26 14:11:56.704 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NameSurname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."Id" = @__p_0
+LIMIT 1
+2025-04-26 14:11:56.761 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a0."Name"
+FROM "AspNetUserRoles" AS a
+INNER JOIN "AspNetRoles" AS a0 ON a."RoleId" = a0."Id"
+WHERE a."UserId" = @__userId_0
+2025-04-26 14:11:56.768 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NameSurname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-04-26 14:11:56.800 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedEmail_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NameSurname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2025-04-26 14:11:56.807 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@p17='?', @p0='?' (DbType = Int32), @p1='?', @p18='?', @p2='?', @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTime), @p6='?', @p7='?', @p8='?', @p9='?', @p10='?', @p11='?' (DbType = Boolean), @p12='?', @p13='?' (DbType = DateTime), @p14='?', @p15='?' (DbType = Boolean), @p16='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "AccessFailedCount" = @p0, "ConcurrencyStamp" = @p1, "Email" = @p2, "EmailConfirmed" = @p3, "LockoutEnabled" = @p4, "LockoutEnd" = @p5, "NameSurname" = @p6, "NormalizedEmail" = @p7, "NormalizedUserName" = @p8, "PasswordHash" = @p9, "PhoneNumber" = @p10, "PhoneNumberConfirmed" = @p11, "RefreshToken" = @p12, "RefreshTokenEndDate" = @p13, "SecurityStamp" = @p14, "TwoFactorEnabled" = @p15, "UserName" = @p16
+WHERE "Id" = @p17 AND "ConcurrencyStamp" = @p18;
+2025-04-26 14:11:56.822 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedRoleName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedRoleName_0
+LIMIT 2
+2025-04-26 14:11:56.852 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."UserId", a."RoleId"
+FROM "AspNetUserRoles" AS a
+WHERE a."UserId" = @__p_0 AND a."RoleId" = @__p_1
+LIMIT 1
+2025-04-26 14:11:56.881 +03:00 [INF] Executed DbCommand (26ms) [Parameters=[@__normalizedRoleName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedRoleName_0
+LIMIT 2
+2025-04-26 14:11:56.898 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedRoleName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedRoleName_0
+LIMIT 2
+2025-04-26 14:11:56.903 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."UserId", a."RoleId"
+FROM "AspNetUserRoles" AS a
+WHERE a."UserId" = @__p_0 AND a."RoleId" = @__p_1
+LIMIT 1
+2025-04-26 14:11:56.905 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @__normalizedRoleName_0
+LIMIT 2
+2025-04-26 14:11:56.907 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NameSurname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-04-26 14:11:56.909 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NameSurname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2025-04-26 14:11:56.931 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?', @p21='?', @p4='?' (DbType = Int32), @p5='?', @p22='?', @p6='?', @p7='?' (DbType = Boolean), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTime), @p10='?', @p11='?', @p12='?', @p13='?', @p14='?', @p15='?' (DbType = Boolean), @p16='?', @p17='?' (DbType = DateTime), @p18='?', @p19='?' (DbType = Boolean), @p20='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetUserRoles" ("RoleId", "UserId")
+VALUES (@p0, @p1);
+INSERT INTO "AspNetUserRoles" ("RoleId", "UserId")
+VALUES (@p2, @p3);
+UPDATE "AspNetUsers" SET "AccessFailedCount" = @p4, "ConcurrencyStamp" = @p5, "Email" = @p6, "EmailConfirmed" = @p7, "LockoutEnabled" = @p8, "LockoutEnd" = @p9, "NameSurname" = @p10, "NormalizedEmail" = @p11, "NormalizedUserName" = @p12, "PasswordHash" = @p13, "PhoneNumber" = @p14, "PhoneNumberConfirmed" = @p15, "RefreshToken" = @p16, "RefreshTokenEndDate" = @p17, "SecurityStamp" = @p18, "TwoFactorEnabled" = @p19, "UserName" = @p20
+WHERE "Id" = @p21 AND "ConcurrencyStamp" = @p22;
+2025-04-26 14:11:56.941 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Commands.AppUser.AssignRoleToUser.AssignRoleToUserCommandResponse'.
+2025-04-26 14:11:56.941 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.UsersController.AssignRoleToUser (ETicaretAPI.API) in 306.4365ms
+2025-04-26 14:11:56.941 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.UsersController.AssignRoleToUser (ETicaretAPI.API)'
+2025-04-26 14:11:56.941 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7285/api/users/assign-role-to-user application/json 77 - 200 - application/json;+charset=utf-8 312.4492ms
+2025-04-26 14:11:58.652 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/users/get-roles-to-user/1e43ac2e-ff45-4f2f-bc14-f38ee387569b - -
+2025-04-26 14:11:58.653 +03:00 [INF] CORS policy execution successful.
+2025-04-26 14:11:58.653 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/users/get-roles-to-user/1e43ac2e-ff45-4f2f-bc14-f38ee387569b - - - 204 - - 1.1491ms
+2025-04-26 14:11:58.655 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7285/api/users/get-roles-to-user/1e43ac2e-ff45-4f2f-bc14-f38ee387569b - -
+2025-04-26 14:11:58.655 +03:00 [INF] CORS policy execution successful.
+2025-04-26 14:11:58.656 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.UsersController.GetRolesToUser (ETicaretAPI.API)'
+2025-04-26 14:11:58.657 +03:00 [INF] Route matched with {action = "GetRolesToUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRolesToUser(ETicaretAPI.Application.Features.Queries.AppUser.GetRolesToUser.GetRolesToUserQueryRequest) on controller ETicaretAPI.API.Controllers.UsersController (ETicaretAPI.API).
+2025-04-26 14:11:58.693 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NameSurname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenEndDate", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."Id" = @__p_0
+LIMIT 1
+2025-04-26 14:11:58.848 +03:00 [INF] Executed DbCommand (27ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a0."Name"
+FROM "AspNetUserRoles" AS a
+INNER JOIN "AspNetRoles" AS a0 ON a."RoleId" = a0."Id"
+WHERE a."UserId" = @__userId_0
+2025-04-26 14:11:58.940 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Queries.AppUser.GetRolesToUser.GetRolesToUserQueryResponse'.
+2025-04-26 14:11:58.941 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.UsersController.GetRolesToUser (ETicaretAPI.API) in 283.9996ms
+2025-04-26 14:11:58.942 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.UsersController.GetRolesToUser (ETicaretAPI.API)'
+2025-04-26 14:11:58.943 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/api/users/get-roles-to-user/1e43ac2e-ff45-4f2f-bc14-f38ee387569b - - - 200 - application/json;+charset=utf-8 287.8694ms
+2025-04-26 14:11:58.945 +03:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=-1&size=-1 - -
+2025-04-26 14:11:58.945 +03:00 [INF] CORS policy execution successful.
+2025-04-26 14:11:58.946 +03:00 [INF] Request finished HTTP/1.1 OPTIONS https://localhost:7285/api/roles?page=-1&size=-1 - - - 204 - - 0.4142ms
+2025-04-26 14:11:58.947 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7285/api/roles?page=-1&size=-1 - -
+2025-04-26 14:11:58.947 +03:00 [INF] CORS policy execution successful.
+2025-04-26 14:11:58.947 +03:00 [INF] Executing endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 14:11:58.947 +03:00 [INF] Route matched with {action = "GetRoles", controller = "Roles"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRoles(ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryRequest) on controller ETicaretAPI.API.Controllers.RolesController (ETicaretAPI.API).
+2025-04-26 14:11:58.955 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "AspNetRoles" AS a
+2025-04-26 14:11:58.955 +03:00 [INF] Executing OkObjectResult, writing value of type 'ETicaretAPI.Application.Features.Queries.Role.GetRoles.GetRolesQueryResponse'.
+2025-04-26 14:11:58.979 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."Name"
+FROM "AspNetRoles" AS a
+2025-04-26 14:11:59.105 +03:00 [INF] Executed action ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API) in 157.3061ms
+2025-04-26 14:11:59.105 +03:00 [INF] Executed endpoint 'ETicaretAPI.API.Controllers.RolesController.GetRoles (ETicaretAPI.API)'
+2025-04-26 14:11:59.106 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7285/api/roles?page=-1&size=-1 - - - 200 - application/json;+charset=utf-8 159.4045ms

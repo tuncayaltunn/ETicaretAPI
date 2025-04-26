@@ -26,6 +26,10 @@ using ETicaretAPI.Persistence.Repositories.BasketItemRepositories;
 using Microsoft.AspNetCore.Identity;
 using ETicaretAPI.Application.Repositories.ICompletedOrderRepositories;
 using ETicaretAPI.Persistence.Repositories.CompletedOrderRepositories;
+using ETicaretAPI.Application.Repositories.IEndPointRepositories;
+using ETicaretAPI.Application.Repositories.IMenuRepositories;
+using ETicaretAPI.Persistence.Repositories.EndpointRepositories;
+using ETicaretAPI.Persistence.Repositories.MenuRepositories;
 
 namespace ETicaretAPI.Persistence
 {
@@ -75,12 +79,20 @@ namespace ETicaretAPI.Persistence
             services.AddScoped<ICompletedOrderReadRepository, CompletedOrderReadRepository>();
             services.AddScoped<ICompletedOrderWriteRepository, CompletedOrderWriteRepository>();
 
+			services.AddScoped<IEndpointReadRepository, EndpointReadRepository>();
+            services.AddScoped<IEndpointWriteRepository, EndpointWriteRepository>();
+
+			services.AddScoped<IMenuReadRepository, MenuReadRepository>();
+            services.AddScoped<IMenuWriteRepository, MenuWriteRepository>();
+
             services.AddScoped<IBasketService, BasketService>();
             services.AddScoped<IUserService, UserService>();
 			services.AddScoped<IAuthService, AuthService>();
 			services.AddScoped<IExternalAuthentication,AuthService>();
             services.AddScoped<IInternalAuthentication, AuthService>();
             services.AddScoped<IOrderService, OrderService>();
+            services.AddScoped<IRoleService, RoleService>();
+			services.AddScoped<IAuthorizationEndpointService, AuthorizationEndpointService>();
         } 
 	}
 }

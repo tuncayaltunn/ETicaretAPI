@@ -88,6 +88,15 @@
     <None Remove="Features\Commands\Role\CreateRole\" />
     <None Remove="Features\Commands\Role\DeleteRole\" />
     <None Remove="Features\Commands\Role\UpdateRole\" />
+    <None Remove="Features\Queries\AuthorizationEndPoint\" />
+    <None Remove="Features\Queries\AuthorizationEndPoint\GetRolesToEndPoint\" />
+    <None Remove="Features\Commands\AuthorizationEndPoint\" />
+    <None Remove="Features\Commands\AuthorizationEndPoint\AssignRoleEndPoint\" />
+    <None Remove="Repositories\IEndPointRepositories\" />
+    <None Remove="Repositories\IMenuRepositories\" />
+    <None Remove="Features\Queries\AppUser\GetAllUsers\" />
+    <None Remove="Features\Queries\AppUser\GetRolesToUser\" />
+    <None Remove="Features\Commands\AppUser\AssignRoleToUser\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abstractions\" />
@@ -168,6 +177,15 @@
     <Folder Include="Features\Commands\Role\CreateRole\" />
     <Folder Include="Features\Commands\Role\DeleteRole\" />
     <Folder Include="Features\Commands\Role\UpdateRole\" />
+    <Folder Include="Features\Queries\AuthorizationEndPoint\" />
+    <Folder Include="Features\Queries\AuthorizationEndPoint\GetRolesToEndPoint\" />
+    <Folder Include="Features\Commands\AuthorizationEndPoint\" />
+    <Folder Include="Features\Commands\AuthorizationEndPoint\AssignRoleEndPoint\" />
+    <Folder Include="Repositories\IEndPointRepositories\" />
+    <Folder Include="Repositories\IMenuRepositories\" />
+    <Folder Include="Features\Queries\AppUser\GetAllUsers\" />
+    <Folder Include="Features\Queries\AppUser\GetRolesToUser\" />
+    <Folder Include="Features\Commands\AppUser\AssignRoleToUser\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0" />
